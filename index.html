@@ -8,9 +8,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000020; /* Ngjyra blu shumë e errët */
+            background: linear-gradient(135deg, #000020, #000033); /* Gradient për sfondin e faqes së parë */
             color: #d3d3d3; /* Ngjyra e hirtë për tekstin */
-            /* overflow: hidden; Për të lejuar lëvizjen poshtë-lart */
+            transition: background 3s ease-in-out; /* Për të bërë ndryshimin gradual të sfondit */
         }
         .container {
             width: 80%;
@@ -85,6 +85,10 @@
         .floating-text {
             animation: float 3s ease-in-out infinite;
             text-align: center; /* Për të vendosur tekstin në mes */
+        }
+        .services-container ul {
+            list-style-type: none; /* Për të hequr pikat e renditjes */
+            padding: 0;
         }
         @keyframes float {
             0%, 100% {
