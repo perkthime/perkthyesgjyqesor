@@ -53,7 +53,6 @@
             text-align: center;
             background: linear-gradient(90deg, #000428, #004e92); /* Gradient i zi në kaltër futuriste */
             color: #fff; /* Teksti i bardhë */
-            overflow: hidden;
         }
         .showcase h1 {
             font-size: 3em;
@@ -61,27 +60,6 @@
         }
         .showcase p {
             font-size: 1.5em;
-        }
-        .moving-object {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, #00ffcc, #0072ff); /* Gradient radial futurist */
-            border-radius: 50%;
-            animation: moveObject 10s linear infinite, rotateObject 10s linear infinite;
-        }
-        @keyframes moveObject {
-            0% { transform: translate(-50%, -50%) translateX(0); }
-            25% { transform: translate(-50%, -50%) translateX(200px); }
-            50% { transform: translate(-50%, -50%) translateX(200px) translateY(200px); }
-            75% { transform: translate(-50%, -50%) translateX(0) translateY(200px); }
-            100% { transform: translate(-50%, -50%) translateX(0); }
-        }
-        @keyframes rotateObject {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
         section {
             padding: 20px 0;
@@ -133,7 +111,6 @@
         <div class="container">
             <h1>Mirë se vini në Shërbime Përkthimi Profesionale</h1>
             <p>Ofrojmë përkthime profesionale dhe të sakta për të gjitha nevojat tuaja.</p>
-            <div class="moving-object"></div>
         </div>
     </section>
 
