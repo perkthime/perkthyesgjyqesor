@@ -62,6 +62,7 @@
         .services, .projects {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
         }
 
         .service, .project {
@@ -72,6 +73,34 @@
             background-color: rgba(0, 31, 63, 0.8); /* Blu e mbyllt me transparencë */
         }
 
+        .service:nth-child(1) {
+            background-color: #ff6347; /* Ngjyrë e kuqe */
+        }
+
+        .service:nth-child(2) {
+            background-color: #4682b4; /* Ngjyrë blu */
+        }
+
+        .service:nth-child(3) {
+            background-color: #32cd32; /* Ngjyrë jeshile */
+        }
+
+        .service:nth-child(4) {
+            background-color: #ffa500; /* Ngjyrë portokalli */
+        }
+
+        .service:nth-child(5) {
+            background-color: #9370db; /* Ngjyrë vjollcë */
+        }
+
+        .service:nth-child(6) {
+            background-color: #ff69b4; /* Ngjyrë rozë */
+        }
+
+        .service:nth-child(7) {
+            background-color: #20b2aa; /* Ngjyrë e kaltër */
+        }
+
         footer {
             background-color: #001f3f;
             color: white;
@@ -80,6 +109,20 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
         }
     </style>
 </head>
@@ -143,6 +186,17 @@
             <input type="email" id="email" name="email">
             <input type="submit" value="Submit">
         </form>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+            </a>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 Content Marketing Agency</p>
