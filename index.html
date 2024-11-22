@@ -94,6 +94,14 @@
                 transform: translateY(-10px);
             }
         }
+        .video-row {
+            display: flex;
+            justify-content: space-between;
+        }
+        .video-container iframe {
+            width: 300px; /* Gjerësia e re për videot */
+            height: 200px; /* Lartësia e re për videot */
+        }
     </style>
 </head>
 <body>
@@ -131,13 +139,15 @@
             </div>
             <div id="video" class="section">
                 <h2>Video</h2>
-                <div class="video-container">
-                    <h3>Publicitet në gjuhën frënge</h3>
-                    <iframe src="https://drive.google.com/file/d/1aRXqp3Q4FtOi8ABf-whxadzhNRVPySnE/preview" width="640" height="480" allow="autoplay"></iframe>
-                </div>
-                <div class="video-container">
-                    <h3>Publicitet në gjuhën shqipe</h3>
-                    <iframe src="https://drive.google.com/file/d/17aReN5sGgcSbZQmdiClIEduKTdQWpxHh/preview" width="640" height="480" allow="autoplay"></iframe>
+                <div class="video-row">
+                    <div class="video-container">
+                        <h3>Publicitet në gjuhën frënge</h3>
+                        <iframe src="https://drive.google.com/file/d/1aRXqp3Q4FtOi8ABf-whxadzhNRVPySnE/preview" allow="autoplay"></iframe>
+                    </div>
+                    <div class="video-container">
+                        <h3>Publicitet në gjuhën shqipe</h3>
+                        <iframe src="https://drive.google.com/file/d/17aReN5sGgcSbZQmdiClIEduKTdQWpxHh/preview" allow="autoplay"></iframe>
+                    </div>
                 </div>
             </div>
             <div id="contact" class="section contact-container">
