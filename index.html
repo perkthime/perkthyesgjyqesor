@@ -20,12 +20,25 @@
         header {
             background: rgba(0, 0, 0, 0.8);
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
+            padding: 20px 0;
+            text-align: center;
         }
         header h1 {
-            text-align: center;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background: #575757;
         }
         section {
             padding: 20px 0;
@@ -55,7 +68,11 @@
             <h1>Shërbime Përkthimi Profesionale</h1>
         </div>
     </header>
-    <section class="container">
+    <nav>
+        <a href="#sherbimet">Shërbimet Tona</a>
+        <a href="#kontaktoni">Kontaktoni</a>
+    </nav>
+    <section id="sherbimet" class="container">
         <h2>Shërbimet Tona</h2>
         <p>Keni nevojë për përkthime të sakta dhe profesionale të dokumenteve ligjore nga frëngjishtja në shqip dhe anasjelltas, shërbime përkthimi të besueshme për të gjitha nevojat tuaja ligjore dhe mediatike.</p>
         <p>Ne ofrojmë një gamë të plotë shërbimesh përkthimi për të përmbushur të gjitha nevojat tuaja, duke përfshirë:</p>
@@ -69,7 +86,7 @@
             <li>Përkthime të etiketave të ushqimeve: informacion mbi të dhënat dhe udhëzimet për përdorim.</li>
         </ul>
     </section>
-    <section class="container">
+    <section id="kontaktoni" class="container">
         <h2>Kontaktoni</h2>
         <p>Për më shumë informacion, kontaktoni: <a href="mailto:murati.arianit@gmail.com">murati.arianit@gmail.com</a> ose telefononi në +383 45 569 246.</p>
     </section>
