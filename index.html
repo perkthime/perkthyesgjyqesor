@@ -81,6 +81,17 @@
         .video-container h3 {
             color: white;
         }
+        .floating-text {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,13 +118,13 @@
             <div id="services" class="section">
                 <h2>Our Services</h2>
                 <ul>
-                    <li>Përkthime Ligjore: Ne ofrojmë përkthime ligjore, duke përfshirë dokumente ligjore, kontrata dhe vendime gjyqësore.</li>
-                    <li>Përkthime Mjekësore: Kujdesemi për përkthimet mjekësore si raportet mjekësore, udhëzimet e përkthimit dhe fletpalosjet farmaceutike.</li>
-                    <li>Përkthime Teknike: Ne kryejmë përkthime teknike duke mbuluar manuale teknike, udhëzimet e transportit dhe dokumentacionin teknik për marketing.</li>
-                    <li>Përkthime Reklamuese: Ne përkthejmë materiale reklamuese, broshura dhe rrjete sociale.</li>
-                    <li>Përkthime Mediatike: Gjithashtu bëjmë përkthime mediatike, filma dhe dokumentarë.</li>
-                    <li>Përkthime Administrative: Ofron përkthime administrative duke përfshirë dokumente qeveritare, formularë dhe korrespondencë zyrtare.</li>
-                    <li>Përkthime të Etiketave të Ushqimeve: Kryejmë përkthimet e etiketave të ushqimeve, duke ofruar informacion mbi të dhënat dhe udhëzimet për përdorim.</li>
+                    <li class="floating-text">Përkthime Ligjore</li>
+                    <li class="floating-text">Përkthime Mjekësore</li>
+                    <li class="floating-text">Përkthime Teknike</li>
+                    <li class="floating-text">Përkthime Reklamuese</li>
+                    <li class="floating-text">Përkthime Mediatike</li>
+                    <li class="floating-text">Përkthime Administrative</li>
+                    <li class="floating-text">Përkthime të Etiketave të Ushqimeve</li>
                 </ul>
             </div>
             <div id="video" class="section">
