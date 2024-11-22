@@ -15,6 +15,7 @@
         .container {
             width: 80%;
             margin: 0 auto;
+            position: relative; /* Për të pozicionuar topat dhe kubet */
         }
         .navbar {
             display: flex;
@@ -58,20 +59,18 @@
         .section.active {
             display: block;
         }
-        .ball {
-            width: 20px;
-            height: 20px;
-            background-color: orange;
-            border-radius: 50%;
+        .shape {
             position: absolute;
-            animation: move 5s infinite;
+            border-radius: 50%;
+            background-color: orange;
         }
-        @keyframes move {
-            0% { transform: translate(0, 0); }
-            25% { transform: translate(100vw, 0); }
-            50% { transform: translate(100vw, 100vh); }
-            75% { transform: translate(0, 100vh); }
-            100% { transform: translate(0, 0); }
+        .shape.square {
+            border-radius: 0;
+            background-color: white;
+        }
+        .shape.orange-square {
+            border-radius: 0;
+            background-color: orange;
         }
     </style>
 </head>
@@ -125,11 +124,22 @@
         </div>
     </div>
 
-    <div class="ball" style="top: 10%; left: 10%;"></div>
-    <div class="ball" style="top: 20%; left: 20%;"></div>
-    <div class="ball" style="top: 30%; left: 30%;"></div>
-    <div class="ball" style="top: 40%; left: 40%;"></div>
-    <div class="ball" style="top: 50%; left: 50%;"></div>
+    <!-- Topa dhe kube të shpërndarë në faqen kryesore -->
+    <div class="shape" style="top: 10%; left: 10%; width: 30px; height: 30px;"></div>
+    <div class="shape" style="top: 20%; left: 20%; width: 50px; height: 50px;"></div>
+    <div class="shape" style="top: 30%; left: 30%; width: 40px; height: 40px;"></div>
+    <div class="shape" style="top: 40%; left: 40%; width: 60px; height: 60px;"></div>
+    <div class="shape" style="top: 50%; left: 50%; width: 20px; height: 20px;"></div>
+    <div class="shape square" style="top: 15%; left: 15%; width: 30px; height: 30px;"></div>
+    <div class="shape square" style="top: 25%; left: 25%; width: 50px; height: 50px;"></div>
+    <div class="shape square" style="top: 35%; left: 35%; width: 40px; height: 40px;"></div>
+    <div class="shape square" style="top: 45%; left: 45%; width: 60px; height: 60px;"></div>
+    <div class="shape square" style="top: 55%; left: 55%; width: 20px; height: 20px;"></div>
+    <div class="shape orange-square" style="top: 60%; left: 60%; width: 30px; height: 30px;"></div>
+    <div class="shape orange-square" style="top: 70%; left: 70%; width: 50px; height: 50px;"></div>
+    <div class="shape orange-square" style="top: 80%; left: 80%; width: 40px; height: 40px;"></div>
+    <div class="shape orange-square" style="top: 90%; left: 90%; width: 60px; height: 60px;"></div>
+    <div class="shape orange-square" style="top: 95%; left: 95%; width: 20px; height: 20px;"></div>
 
     <script>
         function showSection(sectionId) {
@@ -137,8 +147,4 @@
             sections.forEach(function(section) {
                 section.classList.remove('active');
             });
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
-</body>
-</html>
+            document.getElementById(sectionId).
