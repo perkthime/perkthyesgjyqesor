@@ -3,103 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shërbime Përkthimi</title>
+    <title>Shërbime Përkthimi Profesionale</title>
     <style>
         body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #6a0572, #a4508b);
+            color: white;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000; /* Sfond i zi */
-            color: #fff; /* Tekst i bardhë */
-        }
-        header {
-            background-color: #8A2BE2; /* Sfond violet i errët i ndezur */
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        main {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        section {
-            width: 80%;
-            margin: 1rem 0;
-            padding: 1rem;
-            background-color: #000; /* Sfond i zi */
-            border-radius: 8px;
-        }
-        h1, h2 {
-            color: #fff; /* Tekst i bardhë */
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: #000; /* Sfond i zi për elementet e listës */
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            border: none; /* Pa kufij */
-        }
-        footer {
-            background-color: #8A2BE2; /* Sfond violet i errët i ndezur */
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        .gradient {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #8A2BE2, #000, #8A2BE2);
+            animation: gradient 15s ease infinite;
             background-size: 400% 400%;
-            animation: gradient-animation 15s ease infinite;
-            z-index: -1; /* Sigurohuni që të jetë nën tekstin dhe seksionet */
         }
-        @keyframes gradient-animation {
+
+        @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .services, .contact, .video {
+            margin: 20px 0;
+        }
+
+        .video iframe {
+            width: 80%;
+            height: 400px;
+        }
     </style>
 </head>
 <body>
-    <div class="gradient"></div> <!-- Moving gradient background -->
-    <header>
+    <div class="container">
         <h1>Shërbime Përkthimi Profesionale</h1>
-    </header>
-    <main>
-        <section id="services">
-            <h2>Shërbimet Tona</h2>
-            <p>Keni nevojë për përkthime të sakta dhe profesionale të dokumenteve ligjore nga frëngjishtja në shqip dhe anasjelltas, shërbime përkthimi të besueshme për të gjitha nevojat tuaja ligjore dhe mediatike.</p>
-            <p>Ne ofrojmë një gamë të plotë shërbimesh përkthimi për të përmbushur të gjitha nevojat tuaja, duke përfshirë:</p>
-            <ul>
-                <li>Përkthime ligjore: dokumente ligjore, kontrata dhe vendime gjyqësore.</li>
-                <li>Përkthime mjekësore: raporte mjekësore, udhëzime dhe fletpalosje farmaceutike.</li>
-                <li>Përkthime teknike: manuale teknike, udhëzime transporti dhe dokumentacion teknik për marketing.</li>
-                <li>Përkthime reklamuese: materiale reklamuese, broshura dhe rrjete sociale.</li>
-                <li>Përkthime mediatike: filma dhe dokumentarë.</li>
-                <li>Përkthime administrative: dokumente qeveritare, formularë dhe korrespondencë zyrtare.</li>
-                <li>Përkthime të etiketave të ushqimeve: informacion mbi të dhënat dhe udhëzimet për përdorim.</li>
-            </ul>
-        </section>
-        <section id="contact">
+        
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <div class="contact">
             <h2>Kontaktoni</h2>
-            <p>Për më shumë informacion, kontaktoni: <a href="mailto:murati.arianit@gmail.com">murati.arianit@gmail.com</a> ose telefononi në <a href="tel:+38345569246">+383 45 569 246</a>.</p>
-        </section>
-        <section id="video">
-            <h2>Video</h2>
-            <iframe src="https://drive.google.com/file/d/1AGu8omIAMBTbVvJYgWNuTi5gy47yBOrr/preview" width="640" height="480" allow="autoplay"></iframe>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Shërbime Përkthimi Profesionale. Të gjitha të drejtat e rezervuara.</p>
-    </footer>
-
+            <p>Për më shumë informacion, kontaktoni: <a href="mailto:murati.arianit@gmail.com">murati.arianit@gmail.com</a> ose telefononi në +383 45 569 246.</p>
+        </div>
+        
+        <footer>
+            <p>© 2024 Shërbime Përkthimi Profesionale. Të gjitha të drejtat e rezervuara.</p>
+        </footer>
+    </div>
 </body>
 </html>
