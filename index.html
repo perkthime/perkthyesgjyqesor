@@ -6,10 +6,10 @@
     <title>Shërbime Përkthimi Profesionale</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif; /* Ndryshimi i stilit të tekstit */
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Ngjyra gri e lehtë */
+            background-color: #f0f0f0; /* Sfondi gri i lehtë */
             color: #333; /* Ngjyra e tekstit */
         }
         .container {
@@ -18,8 +18,8 @@
             overflow: hidden;
         }
         header {
-            background: #fff; /* Sfondi i bardhë */
-            color: #333; /* Teksti i zi */
+            background: #4CAF50; /* Ngjyra jeshile e qetë */
+            color: #fff; /* Teksti i bardhë */
             padding: 20px 0;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -27,6 +27,7 @@
         header h1 {
             margin: 0;
             font-size: 2.5em;
+            color: #fff; /* Teksti i bardhë */
         }
         nav ul {
             padding: 0;
@@ -38,19 +39,20 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #333;
+            color: #fff;
             text-decoration: none;
             font-size: 1.2em;
         }
         .showcase {
+            position: relative;
             min-height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: #5f9ea0; /* Ngjyra e kaltër e hirtë */
+            background: #2196F3; /* Ngjyra kaltër e qetë */
             color: #fff; /* Teksti i bardhë */
-            animation: fadeIn 2s;
+            animation: backgroundMove 10s linear infinite;
         }
         .showcase h1 {
             font-size: 3em;
@@ -59,9 +61,28 @@
         .showcase p {
             font-size: 1.5em;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .moving-object {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: #ff6600; /* Ngjyra e objektit */
+            border-radius: 50%;
+            animation: moveObject 5s linear infinite, rotateObject 5s linear infinite;
+        }
+        @keyframes backgroundMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        @keyframes moveObject {
+            0% { transform: translate(-50%, -50%) translateX(0); }
+            50% { transform: translate(-50%, -50%) translateX(200px); }
+            100% { transform: translate(-50%, -50%) translateX(0); }
+        }
+        @keyframes rotateObject {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
         section {
             padding: 20px 0;
@@ -72,9 +93,18 @@
             justify-content: center;
             align-items: center;
         }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: #4CAF50; /* Ngjyra jeshile e qetë */
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 2em;
+        }
         footer {
-            background: #fff; /* Sfondi i bardhë */
-            color: #333; /* Teksti i zi */
+            background: #4CAF50; /* Ngjyra jeshile e qetë */
+            color: #fff; /* Teksti i bardhë */
             text-align: center;
             padding: 10px 0;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
@@ -83,6 +113,8 @@
             color: #ff6600; /* Ngjyra e dukshme dhe koherente me sfondin */
         }
     </style>
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -102,6 +134,7 @@
         <div class="container">
             <h1>Mirë se vini në Shërbime Përkthimi Profesionale</h1>
             <p>Ofrojmë përkthime profesionale dhe të sakta për të gjitha nevojat tuaja.</p>
+            <div class="moving-object"></div>
         </div>
     </section>
 
@@ -115,6 +148,11 @@
     <section id="kontaktoni" class="container">
         <h2>Kontaktoni</h2>
         <p>Për më shumë informacion, kontaktoni: <a href="mailto:murati.arianit@gmail.com" class="highlight">murati.arianit@gmail.com</a> ose telefononi në <span class="highlight">+383 45 569 246</span>.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </section>
 
     <section id="video" class="container">
