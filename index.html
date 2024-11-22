@@ -9,8 +9,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #8a2be2; /* Sfondi violet i ndezur */
-            color: #fff; /* Teksti i bardhë */
+            background-color: #f0f0f0; /* Ngjyra gri e lehtë */
+            color: #333; /* Ngjyra e tekstit */
         }
         .container {
             width: 80%;
@@ -18,53 +18,46 @@
             overflow: hidden;
         }
         header {
-            background: #000; /* Sfondi i zi */
-            color: #fff; /* Teksti i bardhë */
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #8a2be2 3px solid; /* Ngjyra violet e ndezur */
+            background: #fff; /* Sfondi i bardhë */
+            color: #333; /* Teksti i zi */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        header a {
-            color: #fff; /* Teksti i bardhë */
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
-        header ul {
+        nav ul {
             padding: 0;
             list-style: none;
+            text-align: center;
         }
-        header li {
-            float: left;
+        nav ul li {
             display: inline;
-            padding: 0 20px 0 20px;
+            margin: 0 15px;
         }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2em;
         }
         .showcase {
             min-height: 400px;
-            background: url('background.jpg') no-repeat 0 -400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            background: #5f9ea0; /* Ngjyra e kaltër e hirtë */
             color: #fff; /* Teksti i bardhë */
+            animation: fadeIn 2s;
         }
         .showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
+            font-size: 3em;
             margin-bottom: 10px;
         }
         .showcase p {
-            font-size: 20px;
-        }
-        .animate-fade {
-            animation: fadeIn 2s;
+            font-size: 1.5em;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -72,24 +65,29 @@
         }
         section {
             padding: 20px 0;
+            text-align: center;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         footer {
-            background: #000; /* Sfondi i zi */
-            color: #fff; /* Teksti i bardhë */
+            background: #fff; /* Sfondi i bardhë */
+            color: #333; /* Teksti i zi */
             text-align: center;
             padding: 10px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
         .highlight {
-            color: #ffcc00; /* Ngjyra e dukshme dhe koherente me sfondin */
+            color: #ff6600; /* Ngjyra e dukshme dhe koherente me sfondin */
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div id="branding">
-                <h1>Shërbime Përkthimi Profesionale</h1>
-            </div>
+            <h1>Shërbime Përkthimi Profesionale</h1>
             <nav>
                 <ul>
                     <li><a href="#sherbimet">Shërbimet</a></li>
@@ -100,7 +98,7 @@
         </div>
     </header>
 
-    <section class="showcase animate-fade">
+    <section class="showcase">
         <div class="container">
             <h1>Mirë se vini në Shërbime Përkthimi Profesionale</h1>
             <p>Ofrojmë përkthime profesionale dhe të sakta për të gjitha nevojat tuaja.</p>
