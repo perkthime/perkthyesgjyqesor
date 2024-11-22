@@ -16,7 +16,8 @@
         }
         .navbar {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            align-items: center;
             background-color: #333;
             padding: 1em;
         }
@@ -27,6 +28,17 @@
         }
         .navbar a:hover {
             background-color: #575757;
+        }
+        .social-icons {
+            display: flex;
+            gap: 1em;
+        }
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #d3d3d3;
         }
         .content {
             border: 1px solid #ddd;
@@ -45,10 +57,17 @@
 <body>
     <div class="container">
         <div class="navbar">
-            <a href="#" onclick="showSection('about')">About</a>
-            <a href="#" onclick="showSection('services')">Services</a>
-            <a href="#" onclick="showSection('projects')">Projects</a>
-            <a href="#" onclick="showSection('contact')">Contact</a>
+            <div class="nav-links">
+                <a href="#" onclick="showSection('about')">About</a>
+                <a href="#" onclick="showSection('services')">Services</a>
+                <a href="#" onclick="showSection('projects')">Projects</a>
+                <a href="#" onclick="showSection('contact')">Contact</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </div>
         </div>
         
         <div class="content">
