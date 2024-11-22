@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actor Portfolio</title>
+    <title>Content Marketing Agency</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,14 +34,36 @@
             text-decoration: none;
         }
 
+        .hero {
+            background-image: url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
         section {
             padding: 2rem;
         }
 
-        .project {
+        .services, .projects {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .service, .project {
             border: 1px solid #ccc;
             padding: 1rem;
-            margin: 1rem 0;
+            margin: 1rem;
+            width: 30%;
         }
 
         footer {
@@ -57,28 +79,55 @@
 </head>
 <body>
     <header>
-        <h1>Actor Portfolio</h1>
+        <h1>Content Marketing Agency</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+    <div class="hero">
+        <h1>Welcome to Our Agency</h1>
+    </div>
     <section id="about">
-        <h2>About Me</h2>
-        <p>Short bio about the actor.</p>
+        <h2>About Us</h2>
+        <p>We are a leading content marketing agency.</p>
     </section>
-    <section id="projects">
-        <h2>Projects</h2>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Service 1</h3>
+            <p>Description of service 1.</p>
+        </div>
+        <div class="service">
+            <h3>Service 2</h3>
+            <p>Description of service 2.</p>
+        </div>
+        <div class="service">
+            <h3>Service 3</h3>
+            <p>Description of service 3.</p>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <h2>Our Projects</h2>
         <div class="project">
-            <h3>Project Title</h3>
-            <p>Project description.</p>
+            <h3>Project 1</h3>
+            <p>Description of project 1.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of project 2.</p>
+        </div>
+        <div class="project">
+            <h3>Project 3</h3>
+            <p>Description of project 3.</p>
         </div>
     </section>
     <section id="contact">
-        <h2>Contact</h2>
+        <h2>Contact Us</h2>
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
@@ -88,10 +137,7 @@
         </form>
     </section>
     <footer>
-        <p>&copy; 2024 Actor Portfolio</p>
+        <p>&copy; 2024 Content Marketing Agency</p>
     </footer>
-    <script>
-        // Add any JavaScript functionality here
-    </script>
 </body>
 </html>
