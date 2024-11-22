@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shërbime Përkthimi Profesionale</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         body {
             font-family: 'Roboto', sans-serif; /* Ndryshimi i stilit të tekstit */
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Sfondi gri i lehtë */
-            color: #333; /* Ngjyra e tekstit */
+            background-color: #1a1a1a; /* Sfondi i zi */
+            color: #fff; /* Teksti i bardhë */
         }
         .container {
             width: 80%;
@@ -18,7 +19,7 @@
             overflow: hidden;
         }
         header {
-            background: #4CAF50; /* Ngjyra jeshile e qetë */
+            background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient kaltër futurist */
             color: #fff; /* Teksti i bardhë */
             padding: 20px 0;
             text-align: center;
@@ -50,9 +51,9 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: #2196F3; /* Ngjyra kaltër e qetë */
+            background: linear-gradient(90deg, #000428, #004e92); /* Gradient i zi në kaltër futuriste */
             color: #fff; /* Teksti i bardhë */
-            animation: backgroundMove 10s linear infinite;
+            overflow: hidden;
         }
         .showcase h1 {
             font-size: 3em;
@@ -65,19 +66,17 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 100px;
-            height: 100px;
-            background-color: #ff6600; /* Ngjyra e objektit */
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #00ffcc, #0072ff); /* Gradient radial futurist */
             border-radius: 50%;
-            animation: moveObject 5s linear infinite, rotateObject 5s linear infinite;
-        }
-        @keyframes backgroundMove {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 100% 50%; }
+            animation: moveObject 10s linear infinite, rotateObject 10s linear infinite;
         }
         @keyframes moveObject {
             0% { transform: translate(-50%, -50%) translateX(0); }
-            50% { transform: translate(-50%, -50%) translateX(200px); }
+            25% { transform: translate(-50%, -50%) translateX(200px); }
+            50% { transform: translate(-50%, -50%) translateX(200px) translateY(200px); }
+            75% { transform: translate(-50%, -50%) translateX(0) translateY(200px); }
             100% { transform: translate(-50%, -50%) translateX(0); }
         }
         @keyframes rotateObject {
@@ -97,13 +96,13 @@
             margin-top: 20px;
         }
         .social-icons a {
-            color: #4CAF50; /* Ngjyra jeshile e qetë */
+            color: #00c6ff; /* Ngjyra e dukshme dhe koherente me sfondin */
             text-decoration: none;
             margin: 0 10px;
             font-size: 2em;
         }
         footer {
-            background: #4CAF50; /* Ngjyra jeshile e qetë */
+            background: linear-gradient(90deg, #00c6ff, #0072ff); /* Gradient kaltër futurist */
             color: #fff; /* Teksti i bardhë */
             text-align: center;
             padding: 10px 0;
