@@ -7,220 +7,89 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #001f3f; /* Blu e mbyllt */
-            color: white;
-            scroll-behavior: smooth; /* Efekt smooth scrolling */
         }
-
-        header {
-            background-color: #001f3f;
-            color: white;
-            padding: 1rem;
-            text-align: center;
+        .container {
+            width: 80%;
+            margin: 0 auto;
         }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 1em;
         }
-
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
+        .navbar a {
             color: white;
             text-decoration: none;
+            padding: 0.5em 1em;
         }
-
-        .hero {
-            background-image: url('hero-image.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
+        .navbar a:hover {
+            background-color: #575757;
         }
-
-        .hero h1 {
-            font-size: 3rem;
+        .content {
+            border: 1px solid #ddd;
+            padding: 2em;
+            margin-top: 1em;
         }
-
-        section {
-            padding: 2rem;
-            background-color: rgba(0, 31, 63, 0.9); /* Blu e mbyllt me transparencë */
-            margin: 1rem 0;
+        .section {
+            display: none;
         }
-
-        .services {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .service {
-            border: 1px solid #ccc;
-            padding: 0.5rem;
-            margin: 0.5rem 0;
-            width: 60%;
-            background-color: rgba(0, 31, 63, 0.8); /* Blu e mbyllt me transparencë */
-            text-align: center;
-        }
-
-        .service a {
-            color: white;
-            text-decoration: none;
+        .section.active {
             display: block;
-            padding: 0.5rem;
-        }
-
-        .service:nth-child(1) {
-            background-color: #ff6347; /* Ngjyrë e kuqe */
-        }
-
-        .service:nth-child(2) {
-            background-color: #4682b4; /* Ngjyrë blu */
-        }
-
-        .service:nth-child(3) {
-            background-color: #32cd32; /* Ngjyrë jeshile */
-        }
-
-        .service:nth-child(4) {
-            background-color: #ffa500; /* Ngjyrë portokalli */
-        }
-
-        .service:nth-child(5) {
-            background-color: #9370db; /* Ngjyrë vjollcë */
-        }
-
-        .service:nth-child(6) {
-            background-color: #20b2aa; /* Ngjyrë e kaltër */
-        }
-
-        .service:nth-child(7) {
-            background-color: #8b4513; /* Ngjyrë kafe */
-        }
-
-        footer {
-            background-color: #001f3f;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        .social-icons {
-            margin-top: 1rem;
-        }
-
-        .social-icons a {
-            margin: 0 0.5rem;
-            text-decoration: none;
-        }
-
-        .social-icons img {
-            width: 24px;
-            height: 24px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Content Marketing Agency</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="hero">
-        <h1>Welcome to Our Agency</h1>
+    <div class="container">
+        <div class="navbar">
+            <a href="#" onclick="showSection('about')">About</a>
+            <a href="#" onclick="showSection('services')">Services</a>
+            <a href="#" onclick="showSection('projects')">Projects</a>
+            <a href="#" onclick="showSection('contact')">Contact</a>
+        </div>
+        
+        <div class="content">
+            <div id="about" class="section active">
+                <h2>About Us</h2>
+                <p>Keni nevojë për përkthime të sakta dhe profesionale të dokumenteve ligjore nga frëngjishtja në shqip dhe anasjelltas, shërbime përkthimi të besueshme për të gjitha nevojat tuaja ligjore dhe mediatike.</p>
+            </div>
+            <div id="services" class="section">
+                <h2>Our Services</h2>
+                <ul>
+                    <li>Përkthime Ligjore: Ne ofrojmë përkthime ligjore, duke përfshirë dokumente ligjore, kontrata dhe vendime gjyqësore.</li>
+                    <li>Përkthime Mjekësore: Kujdesemi për përkthimet mjekësore si raportet mjekësore, udhëzimet e përkthimit dhe fletpalosjet farmaceutike.</li>
+                    <li>Përkthime Teknike: Ne kryejmë përkthime teknike duke mbuluar manuale teknike, udhëzimet e transportit dhe dokumentacionin teknik për marketing.</li>
+                    <li>Përkthime Reklamuese: Ne përkthejmë materiale reklamuese, broshura dhe rrjete sociale.</li>
+                    <li>Përkthime Mediatike: Gjithashtu bëjmë përkthime mediatike, filma dhe dokumentarë.</li>
+                    <li>Përkthime Administrative: Ofron përkthime administrative duke përfshirë dokumente qeveritare, formularë dhe korrespondencë zyrtare.</li>
+                    <li>Përkthime të Etiketave të Ushqimeve: Kryejmë përkthimet e etiketave të ushqimeve, duke ofruar informacion mbi të dhënat dhe udhëzimet për përdorim.</li>
+                </ul>
+            </div>
+            <div id="projects" class="section">
+                <h2>Projects</h2>
+                <p>Here you can showcase your projects.</p>
+            </div>
+            <div id="contact" class="section">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     </div>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Keni nevojë për përkthime të sakta dhe profesionale të dokumenteve ligjore nga frëngjishtja në shqip dhe anasjelltas, shërbime përkthimi të besueshme për të gjitha nevojat tuaja ligjore dhe mediatike.</p>
-    </section>
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <a href="legal-translations.html">
-                <h3>Përkthime Ligjore</h3>
-                <p>Ne ofrojmë përkthime ligjore, duke përfshirë dokumente ligjore, kontrata dhe vendime gjyqësore.</p>
-            </a>
-        </div>
-        <div class="service">
-            <a href="medical-translations.html">
-                <h3>Përkthime Mjekësore</h3>
-                <p>Kujdesemi për përkthimet mjekësore si raportet mjekësore, udhëzimet e përkthimit dhe fletpalosjet farmaceutike.</p>
-            </a>
-        </div>
-        <div class="service">
-            <a href="technical-translations.html">
-                <h3>Përkthime Teknike</h3>
-                <p>Ne kryejmë përkthime teknike duke mbuluar manuale teknike, udhëzimet e transportit dhe dokumentacionin teknik për marketing.</p>
-            </a>
-        </div>
-        <div class="service">
-            <a href="advertising-translations.html">
-                <h3>Përkthime Reklamuese</h3>
-                <p>Ne përkthejmë materiale reklamuese, broshura dhe rrjete sociale.</p>
-            </a>
-        </div>
-        <div class="service">
-            <a href="media-translations.html">
-                <h3>Përkthime Mediatike</h3>
-                <p>Gjithashtu bëjmë përkthime mediatike, filma dhe dokumentarë.</p>
-            </a>
-        </div>
-        <div class="service">
-            <a href="administrative-translations.html">
-                <h3>Përkthime Administrative</h3>
-                <p>Ofron përkthime administrative duke përfshirë dokumente qeveritare, formularë dhe korrespondencë zyrtare.</p>
-            </a>
-        </div>
-        <div class="service">
-            <a href="food-label-translations.html">
-                <h3>Përkthime të Etiketave të Ushqimeve</h3>
-                <p>Kryejmë përkthimet e etiketave të ushqimeve, duke ofruar informacion mbi të dhënat dhe udhëzimet për përdorim.</p>
-            </a>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <input type="submit" value="Submit">
-        </form>
-        <div class="social-icons">
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-            </a>
-            <a href="https://www.linkedin.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-            </a>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 Content Marketing Agency</p>
-    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
