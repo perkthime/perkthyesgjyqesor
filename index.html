@@ -93,8 +93,8 @@
             height: 100%;
             background-repeat: no-repeat;
             background-size: 50% 100%;
-            opacity: 0.5;
-            animation: moveWaves 10s linear infinite;
+            opacity: 0.3;
+            animation: moveWaves 15s linear infinite;
         }
 
         .wave1 {
@@ -106,13 +106,13 @@
         .wave2 {
             background-image: url('https://www.transparenttextures.com/patterns/wavecut.png');
             top: 50px;
-            animation-delay: -2s;
+            animation-delay: -5s;
         }
 
         .wave3 {
             background-image: url('https://www.transparenttextures.com/patterns/wavecut.png');
             top: 100px;
-            animation-delay: -4s;
+            animation-delay: -10s;
         }
 
         @keyframes moveWaves {
@@ -121,6 +121,34 @@
             }
             100% {
                 transform: translateX(0);
+            }
+        }
+
+        .circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            margin-top: -100px;
+            margin-left: -100px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            animation: moveCircle 10s linear infinite;
+        }
+
+        @keyframes moveCircle {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                background: rgba(255, 255, 255, 0.2);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.5);
+                background: rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                background: rgba(255, 255, 255, 0.2);
             }
         }
     </style>
@@ -132,6 +160,7 @@
         <div class="wave wave2"></div>
         <div class="wave wave3"></div>
     </div>
+    <div class="circle"></div>
     <div class="container">
         <h1>Shërbime Përkthimi Profesionale</h1>
         
