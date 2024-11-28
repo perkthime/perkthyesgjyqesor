@@ -153,6 +153,31 @@
             border-radius: 10px;
             border: 2px solid black;
         }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: orange;
+            color: black;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: darkorange;
+        }
+        .required {
+            color: red;
+        }
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
@@ -213,13 +238,14 @@
 
     <div id="contact" class="content contact">
         <h1>Kontaktoni</h1>
-        <form>
-            <label for="name">Emri:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="message">Mesazhi:</label><br>
-            <textarea id="message" name="message"></textarea><br>
+        <p>Plotësoni të dhënat tuaja</p>
+        <form class="contact-form">
+            <label for="name">Emri: <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">E-mail: <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mesazhi: <span class="required">*</span></label>
+            <textarea id="message" name="message" required></textarea>
             <input type="submit" value="Dërgo">
         </form>
     </div>
@@ -237,16 +263,4 @@
     <div class="social-container">
         <div class="social-links">
             <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram profile of Arianit Murati">
-            </a>
-            <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile of Arianit Murati">
-            </a>
-            <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile of Arianit Murati">
-            </a>
-        </div>
-    </div>
-
-    <div class="footer">
-        Copyright © 2024. Të gjitha të drejtat e rezervuara.
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5
