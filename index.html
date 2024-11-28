@@ -79,30 +79,53 @@
         }
         .content {
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Background color with transparency */
             margin: 20px;
             border-radius: 10px;
+            color: white;
         }
         .welcome {
-            color: orange;
+            color: white;
         }
-        .services, .contact {
-            display: none;
+        .highlight {
+            border: 2px solid orange;
+            color: black;
+            padding: 5px;
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .highlight:hover {
+            transform: scale(1.1);
+        }
+        .main-text {
+            color: orange;
+            text-align: left;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
         .social-container {
             padding: 8px;
             margin: 0px;
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-end;
             align-items: center;
             flex-wrap: wrap;
             position: absolute;
             bottom: 0;
-            left: 0;
+            right: 0;
         }
         .social-links {
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-end;
             align-items: center;
         }
         .social-links a {
@@ -111,27 +134,93 @@
         .social-links img {
             width: 30px;
             height: 30px;
+            transition: background-color 0.2s;
+        }
+        .social-links a:hover img {
+            background-color: orange;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .new-page {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
+            min-height: 100vh;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"] {
+            background-color: orange;
+            color: black;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: darkorange;
+        }
+        .required {
+            color: red;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar .right {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar .right a {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
-        <div class="dropdown">
-            <button class="dropbtn">Shërbime 
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showSection('service1')">Shërbimi 1</a>
-                <a href="#" onclick="showSection('service2')">Shërbimi 2</a>
+        <span class="left">Përkthyes Gjyqësor i Certifikuar për Gjuhët Frëngjisht dhe Shqip</span>
+        <div class="right">
+            <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+            <div class="dropdown">
+                <button class="dropbtn">Shërbime 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('service1')">Shërbimi 1</a>
+                    <a href="#" onclick="showSection('service2')">Shërbimi 2</a>
+                </div>
+            </div> 
+            <a href="#" onclick="showSection('contact')">Kontaktoni</a>
+            <div class="search-container">
+                <a onclick="toggleSearch()">Kërko</a>
+                <input type="text" placeholder="Kërko...">
             </div>
-        </div> 
-        <a href="#" onclick="showSection('contact')">Kontaktoni</a>
+        </div>
     </div>
 
-    <div id="welcome" class="content welcome">
-        <h1>Mirë se vini në faqen time personale!</h1>
-        <p><a href="#" onclick="showSection('services')">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
+    <div id="welcome" class="content welcome" style="display: block;">
+        <h1 style="color: white;">Mirë se vini në faqen time personale!</h1>
+        <p><a href="#" onclick="showSection('services')" class="highlight" style="color: black; border: 2px solid orange;">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
     </div>
 
     <div id="services" class="content services">
@@ -171,18 +260,4 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile of Arianit Murati">
             </a>
             <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile of Arianit Murati">
-            </a>
-        </div>
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.content').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
-</body>
-</html>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile
