@@ -7,9 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
-            background-size: cover;
-            background-attachment: fixed;
+            background-color: #0000FF; /* Ngjyra blu e ndezur */
             margin: 0;
             padding: 0;
         }
@@ -71,6 +69,7 @@
             padding: 20px;
             margin: 20px;
             border-radius: 10px;
+            background-color: white;
         }
         .welcome {
             color: white;
@@ -90,9 +89,6 @@
         .services, .contact {
             display: none;
         }
-        .services, .contact, .service1, .service2 {
-            background-color: white;
-        }
         .main-text {
             color: orange;
             text-align: center;
@@ -107,6 +103,43 @@
             max-width: 100%;
             height: auto;
             border-radius: 10px;
+        }
+        .social-container {
+            padding: 8px;
+            margin: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 52px;
+            background-color: var(--portalThemeColor10);
+        }
+        .follow-us {
+            padding: 8px;
+            margin: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+            min-height: auto;
+            background-color: var(--portalThemeColor1);
+        }
+        .follow-us p {
+            text-align: center;
+            color: var(--portalThemeColor4);
+        }
+        .social-links {
+            padding: 0px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .social-links div {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 300px;
+        }
+        .social-links img {
+            max-width: 100%;
+            width: 100px;
+            height: auto;
         }
     </style>
 </head>
@@ -162,6 +195,33 @@
         </form>
     </div>
 
+    <div class="social-container">
+        <div class="follow-us">
+            <div class="container">
+                <div class="col-lg-12">
+                    <p>Follow us</p>
+                    <div class="social-links">
+                        <div class="col-md-4">
+                            <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
+                                <img src="/1298747instagrambrandlogosocial mediaicon.png" alt="Instagram profile of Arianit Murati">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
+                                <img src="/5365678fbfacebookfacebook logoicon.png" alt="Facebook profile of Arianit Murati">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn">
+                                <img src="/5296501linkedinnetworklinkedin logoicon.png" alt="LinkedIn profile of Arianit Murati">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         function showSection(sectionId) {
             document.querySelectorAll('.content').forEach(section => {
@@ -172,4 +232,3 @@
     </script>
 </body>
 </html>
-
