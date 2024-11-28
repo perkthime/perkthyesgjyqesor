@@ -13,6 +13,11 @@
             background-attachment: fixed;
             margin: 0;
             padding: 0;
+            animation: backgroundAnimation 20s infinite alternate;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
         .navbar {
             background-color: black;
@@ -166,7 +171,6 @@
                 </div>
             </div> 
             <a href="#" onclick="showSection('contact')">Kontaktoni</a>
-            <a href="projects.html">Projektet</a> <!-- Linku për faqen e re -->
         </div>
     </div>
 
@@ -230,26 +234,3 @@
     </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="sq">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projektet</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-        }
-        .content {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        .highlight {
