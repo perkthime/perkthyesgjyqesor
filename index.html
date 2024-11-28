@@ -16,21 +16,32 @@
         .navbar {
             background-color: black;
             overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
         }
-        .navbar a {
-            float: left;
-            display: block;
+        .navbar .left {
+            color: orange;
+            font-size: 18px;
+        }
+        .navbar .right {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .right a {
+            display: inline-block;
             color: white;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
         }
-        .navbar a:hover {
+        .navbar .right a:hover {
             background-color: orange;
             color: black;
         }
         .dropdown {
-            float: left;
+            display: inline-block;
             overflow: hidden;
         }
         .dropdown .dropbtn {
@@ -77,6 +88,29 @@
         }
         .services, .contact {
             display: none;
+        }
+        .social-container {
+            padding: 8px;
+            margin: 0px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .social-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .social-links a {
+            margin: 0 10px;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
         }
     </style>
 </head>
@@ -126,6 +160,20 @@
             <textarea id="message" name="message"></textarea><br>
             <input type="submit" value="Dërgo">
         </form>
+    </div>
+
+    <div class="social-container">
+        <div class="social-links">
+            <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram profile of Arianit Murati">
+            </a>
+            <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile of Arianit Murati">
+            </a>
+            <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile of Arianit Murati">
+            </a>
+        </div>
     </div>
 
     <script>
