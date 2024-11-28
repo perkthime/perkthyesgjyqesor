@@ -211,7 +211,236 @@
         <p>Detajet e Shërbimit 2.</p>
     </div>
 </body>
-</html
+</html>
+I've removed the "Kontakti" section and its data. Let me know if you need any further modifications!
+
+
+Edit in Pages
+
+
+1 of 30 responses
+AI-generated content may be incorrect
+
+
+November 28, 2024 at 12:37 PM
+You said:Fshijeni gjitashtu Kontaktoni
+Copilot said:
+Got it! Here is the updated HTML code with both the "Kontakti" section and the "Kontaktoni" link removed:
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faqja Ime Personale</title>
+    <style>
+        /* Stilet ekzistuese */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            animation: backgroundAnimation 20s infinite alternate;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+        }
+        .navbar .left {
+            color: orange;
+            font-size: 18px;
+        }
+        .navbar .right {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .right a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar .right a:hover {
+            background-color: orange;
+            color: black;
+        }
+        .dropdown {
+            display: inline-block;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: orange;
+            color: black;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            color: white;
+            display: none;
+        }
+        .welcome {
+            color: white;
+        }
+        .highlight {
+            border: 2px solid orange;
+            background-color: orange;
+            color: black;
+            padding: 5px;
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .highlight:hover {
+            transform: scale(1.1);
+        }
+        .main-text {
+            color: orange;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .social-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 8px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+        .social-links {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .social-links a {
+            margin: 0 10px;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar .right {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar .right a {
+                padding: 10px;
+            }
+        }
+        /* Stilet e reja për ndryshimin e ngjyrave */
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+        .dropdown-content a:nth-child(1):hover {
+            background-color: green;
+        }
+        .dropdown-content a:nth-child(2):hover {
+            background-color: lightblue;
+        }
+        .navbar .right a:nth-child(3):hover {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span class="left">Përkthyes Gjyqësor i Certifikuar për Gjuhët Frëngjisht dhe Shqip</span>
+        <div class="right">
+            <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+            <div class="dropdown">
+                <button class="dropbtn">Shërbime 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('service1')">Shërbimi 1</a>
+                    <a href="#" onclick="showSection('service2')">Shërbimi 2</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div id="welcome" class="content welcome" style="display: block;">
+        <h1>Mirë se vini në faqen time personale!</h1>
+        <p><a href="#" onclick="showSection('services')" class="highlight">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
+    </div>
+
+    <div id="services" class="content services">
+        <h1>Shërbimet</h1>
+        <p>Këtu mund të shtoni informacion për shërbimet tuaja.</p>
+    </div>
+
+    <div id="service1" class="content service1">
+        <h1>Shërbimi 1</h1>
+        <p>Detajet e Shërbimit 1.</p>
+        <div class="image-container">
+            <img src="path-to-your-image.jpg" alt="Fotografia ime">
+        </div>
+    </div>
+
+    <div id="service2" class="content service2">
+        <h1>Shërbimi 2</h1>
+        <p>Detajet e Shërbimit 2.</p>
+    </div>
+</body>
+</html>
     <div class="social-container">
         <div class="social-links">
             <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
