@@ -40,6 +40,24 @@
             background-color: orange;
             color: black;
         }
+        .navbar .right .search-container {
+            position: relative;
+        }
+        .navbar .right .search-container input {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 14px;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .navbar .right .search-container input:focus {
+            display: block;
+        }
+        .navbar .right .search-container a {
+            cursor: pointer;
+        }
         .dropdown {
             display: inline-block;
             overflow: hidden;
@@ -152,6 +170,7 @@
             margin: 20px;
             border-radius: 10px;
             border: 2px solid black;
+            min-height: 100vh;
         }
         .contact-form label {
             display: block;
@@ -208,8 +227,10 @@
                 </div>
             </div> 
             <a href="#" onclick="showSection('contact')">Kontaktoni</a>
-            <a href="#" onclick="showSection('newPage1')">Faqja e Re 1</a>
-            <a href="#" onclick="showSection('newPage2')">Faqja e Re 2</a>
+            <div class="search-container">
+                <a onclick="toggleSearch()">Kërko</a>
+                <input type="text" placeholder="Kërko...">
+            </div>
         </div>
     </div>
 
@@ -251,16 +272,7 @@
     </div>
 
     <div id="newPage1" class="content new-page">
-        <h1>Faqja e Re 1</h1>
-        <p>Këtu mund të shtoni përmbajtjen për faqen e re 1.</p>
+        <!-- Faqja e Re 1 -->
     </div>
 
-    <div id="newPage2" class="content new-page">
-        <h1>Faqja e Re 2</h1>
-        <p>Këtu mund të shtoni përmbajtjen për faqen e re 2.</p>
-    </div>
-
-    <div class="social-container">
-        <div class="social-links">
-            <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5
+    <div id="newPage2"
