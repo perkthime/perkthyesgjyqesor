@@ -170,6 +170,15 @@
             background-color: brown;
         }
     </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <div class="navbar">
@@ -185,6 +194,10 @@
                     <a href="#" onclick="showSection('service2')">Shërbimi 2</a>
                 </div>
             </div> 
+            <a href="#" onclick="showSection('contact')">Kontaktoni</a>
+        </div>
+    </div>
+
     <div id="welcome" class="content welcome" style="display: block;">
         <h1>Mirë se vini në faqen time personale!</h1>
         <p><a href="#" onclick="showSection('services')" class="highlight">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
@@ -207,7 +220,6 @@
         <h1>Shërbimi 2</h1>
         <p>Detajet e Shërbimit 2.</p>
     </div>
-
     <div class="social-container">
         <div class="social-links">
             <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
