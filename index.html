@@ -169,42 +169,6 @@
         .navbar .right a:nth-child(3):hover {
             background-color: brown;
         }
-        /* Stilet për rrathët dhe tekstet */
-        .circle-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 24px;
-            margin: 10px;
-        }
-        .circle:nth-child(1) { background-color: red; }
-        .circle:nth-child(2) { background-color: green; }
-        .circle:nth-child(3) { background-color: blue; }
-        .circle:nth-child(4) { background-color: yellow; }
-        .circle:nth-child(5) { background-color: purple; }
-        .circle:nth-child(6) { background-color: orange; }
-        .circle:nth-child(7) { background-color: pink; }
-        .text-area-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .text-area {
-            width: 100px;
-            height: 50px;
-            margin: 10px;
-        }
     </style>
 </head>
 <body>
@@ -233,23 +197,6 @@
     <div id="services" class="content services">
         <h1>Shërbimet</h1>
         <p>Këtu mund të shtoni informacion për shërbimet tuaja.</p>
-        <div class="circle-container">
-            <div class="circle">1</div>
-            <div class="circle">2</div>
-            <div class="circle">3</div>
-            <div class="circle">4</div>
-            <div class="circle">5</div>
-            <div class="circle">6</div>
-            <div class="circle">7</div>
-        </div>
-        <div class="text-area-container">
-            <textarea class="text-area"></textarea>
-            <textarea class="text-area"></textarea>
-            <textarea class="text-area"></textarea>
-            <textarea class="text-area"></textarea>
-            <textarea class="text-area"></textarea>
-            <textarea class="text-area"></textarea>
-        </div>
     </div>
 
     <div id="service1" class="content service1">
@@ -269,7 +216,15 @@
         <h1>Kontaktoni</h1>
         <form>
             <label for="name">Emri:</label><br>
-            <input type="text" id="name" name="
+            <input type="text" id="name" name="name"><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Mesazhi:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Dërgo">
+        </form>
+    </div>
+
     <div class="social-container">
         <div class="social-links">
             <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
