@@ -13,24 +13,9 @@
             background-attachment: fixed;
             margin: 0;
             padding: 0;
-            animation: backgroundAnimation 20s infinite linear;
+            animation: backgroundAnimation 20s infinite alternate;
         }
         @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 0%; }
-        }
-        .smoke {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            background: url('https://www.transparenttextures.com/patterns/smoke.png') repeat;
-            opacity: 0.5;
-            animation: smokeAnimation 30s infinite linear;
-        }
-        @keyframes smokeAnimation {
             0% { background-position: 0% 0%; }
             100% { background-position: 100% 100%; }
         }
@@ -172,7 +157,6 @@
     </style>
 </head>
 <body>
-    <div class="smoke"></div>
     <div class="navbar">
         <span class="left">Përkthyes Gjyqësor i Certifikuar për Gjuhët Frëngjisht dhe Shqip</span>
         <div class="right">
