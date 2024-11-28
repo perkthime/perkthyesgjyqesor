@@ -118,14 +118,16 @@
             padding: 8px;
             margin: 0px;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             flex-wrap: wrap;
-            min-height: 52px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
         }
         .social-links {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
         }
         .social-links a {
@@ -134,6 +136,22 @@
         .social-links img {
             width: 30px;
             height: 30px;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .new-page {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            border: 2px solid black;
         }
         @media (max-width: 768px) {
             .navbar {
@@ -165,8 +183,8 @@
                 </div>
             </div> 
             <a href="#" onclick="showSection('contact')">Kontaktoni</a>
-            <a href="#">Kërko</a>
-            <a href="#">Kyçu me Microsoft</a>
+            <a href="#" onclick="showSection('newPage1')">Faqja e Re 1</a>
+            <a href="#" onclick="showSection('newPage2')">Faqja e Re 2</a>
         </div>
     </div>
 
@@ -206,6 +224,16 @@
         </form>
     </div>
 
+    <div id="newPage1" class="content new-page">
+        <h1>Faqja e Re 1</h1>
+        <p>Këtu mund të shtoni përmbajtjen për faqen e re 1.</p>
+    </div>
+
+    <div id="newPage2" class="content new-page">
+        <h1>Faqja e Re 2</h1>
+        <p>Këtu mund të shtoni përmbajtjen për faqen e re 2.</p>
+    </div>
+
     <div class="social-container">
         <div class="social-links">
             <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
@@ -220,13 +248,5 @@
         </div>
     </div>
 
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.content').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
-</body>
-</html>
+    <div class="footer">
+        Copyright © 2024. Të gjitha të drejtat e rezervuara.
