@@ -214,15 +214,13 @@
 
     <div id="contact" class="content contact">
         <h1>Kontaktoni</h1>
-        <form>
-            <label for="name">Emri:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="message">Mesazhi:</label><br>
-            <textarea id="message" name="message"></textarea><br>
-            <input type="submit" value="Dërgo">
-        </form>
+        <form action="mailto:murati.arianit@gmail.com" method="post" enctype="text/plain">
+    <label for="sender-email">Email-i juaj:</label><br>
+    <input type="email" id="sender-email" name="sender-email" required><br>
+    <label for="message">Mesazhi:</label><br>
+    <textarea id="message" name="message"></textarea><br>
+    <input type="submit" value="Dërgo">
+</form>
     </div>
 
     <div class="social-container">
