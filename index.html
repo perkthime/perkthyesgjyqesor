@@ -96,6 +96,7 @@
         }
         .highlight:hover {
             transform: scale(1.1);
+            cursor: pointer;
         }
         .main-text {
             color: orange;
@@ -201,6 +202,7 @@
         <span class="left">Përkthyes Gjyqësor i Certifikuar për Gjuhët Frëngjisht dhe Shqip</span>
         <div class="right">
             <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+            <a href="#" onclick="showSection('services')">Shërbime</a> <!-- Added Services link -->
             <div class="dropdown">
                 <button class="dropbtn">Shërbime 
                     <i class="fa fa-caret-down"></i>
@@ -215,7 +217,12 @@
         <p><a href="#" onclick="showSection('services')" class="highlight" style="color: white; border: 2px solid orange;">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
     </div>
 
-    <div id="contact" class="content contact">
+    <div id="services" class="content services" style="display: none;">
+        <h1>Shërbimet e Ofruara</h1>
+        <p>Informacion rreth shërbimeve të përkthimit gjyqësor.</p>
+    </div>
+
+    <div id="contact" class="content contact" style="display: none;">
         <h1>Kontaktoni</h1>
         <form>
             <label for="name">Emri:</label><br>
