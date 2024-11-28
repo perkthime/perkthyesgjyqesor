@@ -1,6 +1,68 @@
-<div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px; background-image: url(&quot;/pexels-rafael-guajardo-194140-604684.jpg&quot;); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"><div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;"></div></div>
+<div data-component-theme="portalThemeColor1" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto; background-image: url(&quot;/pexels-rafael-guajardo-194140-604684.jpg&quot;); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap; flex-direction: row-reverse;">
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"></div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <h2>Mirë se vini në faqen time personale!</h2>
+      <script>
+        const colors = ['#0055A4', '#FFFFFF', '#EF4135'];
+        const elements = document.querySelectorAll('.columnBlockLayout');
+        let currentIndex = 0;
+        function changeColors() {
+          elements.forEach((element, index) => {
+            element.style.transition = 'background-color 1s ease-in-out'; // Adding smooth transition
+            const newColor = colors[(currentIndex + index) % colors.length];
+            if (newColor === '#FFFFFF' && element.textContent.includes('Mirë se vini në faqen time personale!')) {
+              element.style.backgroundColor = colors[(currentIndex + index + 1) % colors.length];
+            } else {
+              element.style.backgroundColor = newColor;
+            }
+          });
+          currentIndex = (currentIndex + 1) % colors.length;
+        }
+
+        // Change colors every 4 seconds
+        setInterval(changeColors, 4000);
+      </script>
+      <button onclick="window.location.href='/page'" type="button" value="/page" class="button1">Keni nevojë për përkthyes gjyqësor të besueshëm?</button>
+    </div>
+  </div>
 </div>
-<div class="container" style="padding: 0px; display: flex; flex-wrap: wrap; flex-direction: row-reverse;">
-  <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"><h2>Create an engaging headline, welcome, or call to action</h2></div>
+<div data-component-theme="portalThemeColor11" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 52px;"></div>
+<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"><img src="/Geometric-2.png" alt="" name="Geometric-2.png" style="width: 102.56%; height: 343px; max-width: 100%;"></div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <h2>Biografia</h2>
+      <p>Main pages often include links to stories about how individual people or organizations benefit from interacting with your organization.</p>
+    </div>
+  </div>
 </div>
+<div data-component-theme="portalThemeColor10" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 52px;"></div>
+<div data-component-theme="portalThemeColor1" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <p style="text-align: center; color: var(--portalThemeColor4);">Follow us</p>
+      <div class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+        <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+          <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+            <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram"><img src="/1298747instagrambrandlogosocial mediaicon.png" alt="Instagram profile of Arianit Murati" style="max-width: 100%; width: 100px; height: auto;"></a>
+          </div>
+          <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+            <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook" style="margin-left: auto; margin-right: auto;"><img src="/5365678fbfacebookfacebook logoicon.png" alt="Facebook profile of Arianit Murati" style="max-width: 100%; width: 100px; height: auto;"></a>
+          </div>
+          <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+            <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn" style="margin-left: auto; margin-right: 0;"><img src="/5296501linkedinnetworklinkedin logoicon.png" alt="LinkedIn profile of Arianit Murati" style="max-width: 100%; width: 100px; height: auto;"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  // Fix for incorrect viewport width setting in IE 10 on Windows Phone 8.
+  if (navigator.userAgent.match(/IEMobile/10.0/)) {
+    var msViewportStyle = document.createElement("style");
+    msViewportStyle?.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+    document.getElementsByTagName("head")[0]?.appendChild(msViewportStyle);
+  }
+</script>
