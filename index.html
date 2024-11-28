@@ -1,110 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Pages Example</title>
+    <title>Faqja Ime Personale</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
         }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
             text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
-            color: #fff;
+            padding: 14px 20px;
             text-decoration: none;
         }
-
-        main {
-            padding: 2rem;
+        .navbar a:hover {
+            background-color: orange;
+            color: black;
         }
-
-        section {
-            margin-bottom: 2rem;
+        .content {
+            padding: 20px;
         }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
+        .content h1 {
+            color: orange;
+        }
+        .content p {
+            color: orange;
+        }
+        .contact-form {
+            margin-top: 20px;
+        }
+        .contact-form input, .contact-form textarea {
             width: 100%;
-            bottom: 0;
+            padding: 10px;
+            margin: 5px 0;
         }
-
-        .subpage {
-            margin-left: 2rem;
+        .contact-form button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: orange;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Power Pages</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home section.</p>
-            <div class="subpage">
-                <h3>Subpage 1</h3>
-                <p>This is the first subpage under Home.</p>
-            </div>
-            <div class="subpage">
-                <h3>Subpage 2</h3>
-                <p>This is the second subpage under Home.</p>
-            </div>
-        </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>This is the about section.</p>
-            <div class="subpage">
-                <h3><a href="#subpage1">Subpage 1</a></h3>
-                <p>This is the first subpage under About.</p>
-            </div>
-            <div class="subpage">
-                <h3><a href="#subpage2">Subpage 2</a></h3>
-                <p>This is the second subpage under About.</p>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>This is the contact section.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Power Pages Example</p>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('JavaScript loaded');
-        });
-    </script>
+    <div class="navbar">
+        <a href="#home">Mirë se vini</a>
+        <a href="#services">Shërbime</a>
+        <a href="#contact">Kontaktoni</a>
+    </div>
+
+    <div id="home" class="content">
+        <h1>Mirë se vini në faqen time personale!</h1>
+        <p><a href="#services" style="color: orange;">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
+    </div>
+
+    <div id="services" class="content">
+        <h2>Shërbime</h2>
+        <p>Shërbimi 1</p>
+        <p>Shërbimi 2</p>
+    </div>
+
+    <div id="contact" class="content">
+        <h2>Kontaktoni</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Emri" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <textarea name="message" placeholder="Mesazhi" required></textarea>
+            <button type="submit">Dërgo</button>
+        </form>
+    </div>
 </body>
 </html>
