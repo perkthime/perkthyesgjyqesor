@@ -16,32 +16,21 @@
         .navbar {
             background-color: black;
             overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 20px;
         }
-        .navbar .left {
-            color: orange;
-            font-size: 18px;
-        }
-        .navbar .right {
-            display: flex;
-            align-items: center;
-        }
-        .navbar .right a {
-            display: inline-block;
+        .navbar a {
+            float: left;
+            display: block;
             color: white;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
         }
-        .navbar .right a:hover {
+        .navbar a:hover {
             background-color: orange;
             color: black;
         }
         .dropdown {
-            display: inline-block;
+            float: left;
             overflow: hidden;
         }
         .dropdown .dropbtn {
@@ -79,100 +68,36 @@
         }
         .content {
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Background color with transparency */
             margin: 20px;
             border-radius: 10px;
-            color: white;
-            display: none;
         }
         .welcome {
-            color: white;
-        }
-        .highlight {
-            border: 2px solid orange;
-            background-color: orange;
-            color: black;
-            padding: 5px;
-            display: inline-block;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-        .highlight:hover {
-            transform: scale(1.1);
-        }
-        .main-text {
             color: orange;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 24px;
         }
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .social-container {
-            padding: 8px;
-            margin: 0px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            min-height: 52px;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .social-links a {
-            margin: 0 10px;
-        }
-        .social-links img {
-            width: 30px;
-            height: 30px;
-        }
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-            }
-            .navbar .right {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .navbar .right a {
-                padding: 10px;
-            }
+        .services, .contact {
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <span class="left">Përkthyes Gjyqësor i Certifikuar për Gjuhët Frëngjisht dhe Shqip</span>
-        <div class="right">
-            <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
-            <div class="dropdown">
-                <button class="dropbtn">Shërbime 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showSection('service1')">Shërbimi 1</a>
-                    <a href="#" onclick="showSection('service2')">Shërbimi 2</a>
-                </div>
-            </div> 
-            <a href="#" onclick="showSection('contact')">Kontaktoni</a>
-            <a href="#">Kërko</a>
-            <a href="#">Kyçu me Microsoft</a>
-        </div>
+        <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+        <div class="dropdown">
+            <button class="dropbtn">Shërbime 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showSection('service1')">Shërbimi 1</a>
+                <a href="#" onclick="showSection('service2')">Shërbimi 2</a>
+            </div>
+        </div> 
+        <a href="#" onclick="showSection('contact')">Kontaktoni</a>
     </div>
 
-    <div id="welcome" class="content welcome" style="display: block;">
+    <div id="welcome" class="content welcome">
         <h1>Mirë se vini në faqen time personale!</h1>
-        <p><a href="#" onclick="showSection('services')" class="highlight">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
+        <p><a href="#" onclick="showSection('services')">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
     </div>
 
     <div id="services" class="content services">
@@ -180,15 +105,12 @@
         <p>Këtu mund të shtoni informacion për shërbimet tuaja.</p>
     </div>
 
-    <div id="service1" class="content service1">
+    <div id="service1" class="content services">
         <h1>Shërbimi 1</h1>
         <p>Detajet e Shërbimit 1.</p>
-        <div class="image-container">
-            <img src="path-to-your-image.jpg" alt="Fotografia ime">
-        </div>
     </div>
 
-    <div id="service2" class="content service2">
+    <div id="service2" class="content services">
         <h1>Shërbimi 2</h1>
         <p>Detajet e Shërbimit 2.</p>
     </div>
@@ -204,20 +126,6 @@
             <textarea id="message" name="message"></textarea><br>
             <input type="submit" value="Dërgo">
         </form>
-    </div>
-
-    <div class="social-container">
-        <div class="social-links">
-            <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram profile of Arianit Murati">
-            </a>
-            <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile of Arianit Murati">
-            </a>
-            <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile of Arianit Murati">
-            </a>
-        </div>
     </div>
 
     <script>
