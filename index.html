@@ -3,26 +3,7 @@
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"></div>
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
       <h2>Mirë se vini në faqen time personale!</h2>
-      <script>
-        const colors = ['#0055A4', '#FFFFFF', '#EF4135'];
-        const elements = document.querySelectorAll('.columnBlockLayout');
-        let currentIndex = 0;
-        function changeColors() {
-          elements.forEach((element, index) => {
-            element.style.transition = 'background-color 1s ease-in-out'; // Adding smooth transition
-            const newColor = colors[(currentIndex + index) % colors.length];
-            if (newColor === '#FFFFFF' && element.textContent.includes('Mirë se vini në faqen time personale!')) {
-              element.style.backgroundColor = colors[(currentIndex + index + 1) % colors.length];
-            } else {
-              element.style.backgroundColor = newColor;
-            }
-          });
-          currentIndex = (currentIndex + 1) % colors.length;
-        }
-
-        // Change colors every 4 seconds
-        setInterval(changeColors, 4000);
-      </script>
+          </script>
       <button onclick="window.location.href='/page'" type="button" value="/page" class="button1">Keni nevojë për përkthyes gjyqësor të besueshëm?</button>
     </div>
   </div>
