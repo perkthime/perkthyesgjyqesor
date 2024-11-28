@@ -81,6 +81,11 @@
             color: black;
             padding: 5px;
             display: inline-block;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .highlight:hover {
+            transform: scale(1.1);
         }
         .services, .contact {
             display: none;
@@ -109,10 +114,7 @@
             </div>
         </div> 
         <a href="#" onclick="showSection('contact')">Kontaktoni</a>
-    </div>
-
-    <div class="main-text">
-        Përkthyes Gjyqësor i Certifikuar për Gjuhët Frëngjisht dhe Shqip
+        <span class="main-text">Përkthyes Gjyqësor i Certifikuar për Gjuhët Frëngjisht dhe Shqip</span>
     </div>
 
     <div id="welcome" class="content welcome">
