@@ -57,20 +57,20 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
-            text-align: left.
+            text-align: left;
         }
         .dropdown-content a:hover {
             background-color: orange;
-            color: black.
+            color: black;
         }
         .dropdown:hover .dropdown-content {
-            display: block.
+            display: block;
         }
         .content {
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8); /* Background color with transparency */
             margin: 20px;
-            border-radius: 10px.
+            border-radius: 10px;
         }
         .welcome {
             color: white; /* Changed text color to white */
@@ -81,9 +81,13 @@
             padding: 5px;
             display: inline-block;
             text-decoration: none; /* Removed underline */
+            transition: transform 0.3s; /* Added transition for smooth animation */
+        }
+        .highlight:hover {
+            transform: scale(1.1); /* Scale up the element on hover */
         }
         .services, .contact {
-            display: none.
+            display: none;
         }
     </style>
 </head>
@@ -138,9 +142,9 @@
     <script>
         function showSection(sectionId) {
             document.querySelectorAll('.content').forEach(section => {
-                section.style.display = 'none'.
+                section.style.display = 'none';
             });
-            document.getElementById(sectionId).style.display = 'block'.
+            document.getElementById(sectionId).style.display = 'block';
         }
     </script>
 </body>
