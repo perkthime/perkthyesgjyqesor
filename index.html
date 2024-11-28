@@ -169,29 +169,6 @@
         .navbar .right a:nth-child(3):hover {
             background-color: brown;
         }
-        /* Stilet për rrathët me numra */
-        .circle-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .circle {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            color: white;
-        }
-        .circle:nth-child(1) { background-color: red; }
-        .circle:nth-child(2) { background-color: blue; }
-        .circle:nth-child(3) { background-color: green; }
-        .circle:nth-child(4) { background-color: yellow; }
-        .circle:nth-child(5) { background-color: purple; }
-        .circle:nth-child(6) { background-color: orange; }
-        .circle:nth-child(7) { background-color: pink; }
     </style>
 </head>
 <body>
@@ -220,15 +197,6 @@
     <div id="services" class="content services">
         <h1>Shërbimet</h1>
         <p>Këtu mund të shtoni informacion për shërbimet tuaja.</p>
-        <div class="circle-container">
-            <div class="circle">1</div>
-            <div class="circle">2</div>
-            <div class="circle">3</div>
-            <div class="circle">4</div>
-            <div class="circle">5</div>
-            <div class="circle">6</div>
-            <div class="circle">7</div>
-        </div>
     </div>
 
     <div id="service1" class="content service1">
@@ -256,5 +224,28 @@
             <input type="submit" value="Dërgo">
         </form>
     </div>
+
+    <div class="social-container">
+        <div class="social-links">
+            <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram profile of Arianit Murati">
+            </a>
+            <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile of Arianit Murati">
+            </a>
+            <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile of Arianit Murati">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
