@@ -14,9 +14,10 @@
         .navbar {
             background-color: black;
             overflow: hidden;
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
         }
         .navbar a {
-            float: left;
             display: block;
             color: white;
             text-align: center;
@@ -28,7 +29,6 @@
             color: black;
         }
         .dropdown {
-            float: left;
             overflow: hidden;
         }
         .dropdown .dropbtn {
@@ -71,16 +71,17 @@
             border-radius: 10px;
         }
         .welcome {
-            color: orange;
-        }
-        .services, .contact {
-            display: none;
+            color: white; /* Changed text color to white */
         }
         .highlight {
             color: black;
-            border: 2px solid orange;
+            background-color: orange; /* Filled the field with orange */
             padding: 5px;
             display: inline-block;
+            text-decoration: none; /* Removed underline */
+        }
+        .services, .contact {
+            display: none;
         }
     </style>
 </head>
