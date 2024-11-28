@@ -16,10 +16,11 @@
         .navbar {
             background-color: black;
             overflow: hidden;
+            text-align: right;
+            padding: 14px 20px;
         }
         .navbar a {
-            float: left;
-            display: block;
+            display: inline-block;
             color: white;
             text-align: center;
             padding: 14px 20px;
@@ -30,7 +31,7 @@
             color: black;
         }
         .dropdown {
-            float: left;
+            display: inline-block;
             overflow: hidden;
         }
         .dropdown .dropbtn {
@@ -72,15 +73,26 @@
             border-radius: 10px;
         }
         .welcome {
-            color: orange;
+            color: white;
         }
         .highlight {
             border: 2px solid orange;
+            background-color: orange;
+            color: black;
             padding: 5px;
             display: inline-block;
         }
         .services, .contact {
             display: none;
+        }
+        .services, .contact, .service1, .service2 {
+            background-color: white;
+        }
+        .main-text {
+            color: orange;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -99,6 +111,10 @@
         <a href="#" onclick="showSection('contact')">Kontaktoni</a>
     </div>
 
+    <div class="main-text">
+        Përkthyes Gjyqësor i Certifikuar për Gjuhët Frëngjisht dhe Shqip
+    </div>
+
     <div id="welcome" class="content welcome">
         <h1>Mirë se vini në faqen time personale!</h1>
         <p><a href="#" onclick="showSection('services')" class="highlight">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
@@ -109,12 +125,12 @@
         <p>Këtu mund të shtoni informacion për shërbimet tuaja.</p>
     </div>
 
-    <div id="service1" class="content services">
+    <div id="service1" class="content service1">
         <h1>Shërbimi 1</h1>
         <p>Detajet e Shërbimit 1.</p>
     </div>
 
-    <div id="service2" class="content services">
+    <div id="service2" class="content service2">
         <h1>Shërbimi 2</h1>
         <p>Detajet e Shërbimit 2.</p>
     </div>
