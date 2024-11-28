@@ -7,6 +7,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
         .navbar {
             background-color: black;
@@ -27,58 +30,51 @@
         .content {
             padding: 20px;
         }
-        .content h1 {
+        .welcome {
             color: orange;
         }
-        .content p {
-            color: orange;
-        }
-        .contact-form {
-            margin-top: 20px;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-        }
-        .contact-form button {
-            background-color: black;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-        .contact-form button:hover {
-            background-color: orange;
+        .services, .contact {
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="#home">Mirë se vini</a>
-        <a href="#services">Shërbime</a>
-        <a href="#contact">Kontaktoni</a>
+        <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+        <a href="#" onclick="showSection('services')">Shërbime</a>
+        <a href="#" onclick="showSection('contact')">Kontaktoni</a>
     </div>
 
-    <div id="home" class="content">
+    <div id="welcome" class="content welcome">
         <h1>Mirë se vini në faqen time personale!</h1>
-        <p><a href="#services" style="color: orange;">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
+        <p><a href="#" onclick="showSection('services')">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
     </div>
 
-    <div id="services" class="content">
-        <h2>Shërbime</h2>
-        <p>Shërbimi 1</p>
-        <p>Shërbimi 2</p>
+    <div id="services" class="content services">
+        <h1>Shërbimet</h1>
+        <p>Këtu mund të shtoni informacion për shërbimet tuaja.</p>
     </div>
 
-    <div id="contact" class="content">
-        <h2>Kontaktoni</h2>
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Emri" required>
-            <input type="email" name="email" placeholder="E-mail" required>
-            <textarea name="message" placeholder="Mesazhi" required></textarea>
-            <button type="submit">Dërgo</button>
+    <div id="contact" class="content contact">
+        <h1>Kontaktoni</h1>
+        <form>
+            <label for="name">Emri:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Mesazhi:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Dërgo">
         </form>
     </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
