@@ -1,25 +1,48 @@
 
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
     <style>
-        /* Stilet ekzistuese */
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
-            background-size: cover;
-            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            animation: backgroundAnimation 20s infinite alternate;
+            overflow: hidden;
         }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
+        .background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
         }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="https://www.pexels.com/video/19695890/download/" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <h1>Mirë se vini në faqen time personale</h1>
+        <p>Kjo është një faqe me një video në sfond.</p>
+    </div>
+</body>
+</html>
         .navbar {
             background-color: black;
             overflow: hidden;
