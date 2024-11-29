@@ -347,7 +347,36 @@
             <a href="#" onclick="showSection('service2')">Shërbimi 2</a>
         </div>
     </div>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktoni</title>
+</head>
+<body>
+    <h1>Kontaktoni</h1>
+    <div id="contact">
+        <p>Për të kontaktuar Arianit Murati, përdorni informacionin e mëposhtëm:</p>
+        <p>
+            <a href="mailto:murati.arianit@gmail.com">
+                <img src="path-to-email-icon.png" alt="Email">
+                murati.arianit@gmail.com
+            </a>
+        </p>
+        <p>
+            <a href="tel:+38345569246">
+                <img src="path-to-phone-icon.png" alt="Phone">
+                +383 45 56 92 46
+            </a>
+        </p>
+    </div>
     <a href="#" onclick="showSection('contact')">Kontaktoni</a>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView();
+        }
+    </script>
+</body>
+</html>
 </div>
 
             </div> 
