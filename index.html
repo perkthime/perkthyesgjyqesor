@@ -182,12 +182,13 @@
     </div>
 
     <div id="welcome" class="content welcome" style="display: block;">
-  <h1 class="animated-text">Mirë se vini në faqen time personale!</h1>
+ <h1 class="animated-text">Mirë se vini në faqen time personale!</h1>
 
 <style>
   .animated-text {
     display: inline-block;
-    animation: fadeIn 2s ease-in-out infinite, glow 1.5s ease-in-out infinite;
+    animation: fadeIn 2s ease-in-out infinite, pulse 1.5s ease-in-out infinite;
+    color: #00f; /* Ngjyra e kaltër */
   }
 
   @keyframes fadeIn {
@@ -196,10 +197,10 @@
     100% { opacity: 0; }
   }
 
-  @keyframes glow {
-    0% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff, 0 0 75px #ff00ff; }
-    50% { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff, 0 0 100px #ff00ff, 0 0 150px #ff00ff; }
-    100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 55px #ff00ff, 0 0 75px #ff00ff; }
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
   }
 </style>
 <p>
