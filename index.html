@@ -186,12 +186,22 @@
 <p>
   <a href="#" onclick="showSection('services')" class="highlight">
     <span class="click-icon" style="color: black; position: relative;">
-      <span style="position: absolute; left: -30px; top: 0;">👉</span> Keni nevojë për përkthyes gjyqësor të besueshëm?
+      <span class="moving-icon" style="position: absolute; left: -30px; top: 0;">👉</span> Keni nevojë për përkthyes gjyqësor të besueshëm?
     </span>
   </a>
 </p>
 
 <style>
+@keyframes moveFinger {
+  0% { left: -30px; }
+  50% { left: -40px; }
+  100% { left: -30px; }
+}
+
+.moving-icon {
+  animation: moveFinger 1s infinite;
+}
+</style>
   .click-icon {
     display: inline-block;
     animation: move 1s infinite;
