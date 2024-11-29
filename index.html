@@ -2,38 +2,45 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faqja Ime Personale</title>
+    <title>Video Background</title>
     <style>
-        /* Stilet ekzistuese */
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
-            background-size: cover;
-            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            animation: backgroundAnimation 20s infinite alternate;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
         }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
-        body {
-    font-family: Arial, sans-serif;
-    background-image: url('https://images.pexels.com/photos/813269/pexels-photo-813269.jpeg');
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    animation: backgroundAnimation 20s infinite alternate;
-}
-
-@keyframes backgroundAnimation {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
-}
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop>
+        <source src="https://www.pexels.com/video/19695890/download/" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>Enjoy the beautiful view of Paris!</p>
+    </div>
+</body>
+</html>
         .navbar {
             background-color: black;
             overflow: hidden;
