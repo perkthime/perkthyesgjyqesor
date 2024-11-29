@@ -179,13 +179,31 @@
 
     <div id="welcome" class="content welcome" style="display: block;">
         <h1>Mirë se vini në faqen time personale!</h1>
- <p>
+<p>
   <a href="#" onclick="showSection('services')" class="highlight">
     <span class="click-icon">👉</span> Keni nevojë për përkthyes gjyqësor të besueshëm?
   </a>
 </p>
 
 <style>
+  .click-icon {
+    display: inline-block;
+    animation: move 1s infinite;
+    color: blue; /* Ngjyra e kaltër */
+  }
+
+  @keyframes move {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+</style>
   .click-icon {
     display: inline-block;
     animation: move 1s infinite;
