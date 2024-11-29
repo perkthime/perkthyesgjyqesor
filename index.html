@@ -2,45 +2,24 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Background</title>
+    <title>Faqja Ime Personale</title>
     <style>
+        /* Stilet ekzistuese */
         body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
+            animation: backgroundAnimation 20s infinite alternate;
         }
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
-        .content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
-</head>
-<body>
-    <video class="video-background" autoplay muted loop>
-        <source src="https://www.pexels.com/video/19695890/download/" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="content">
-        <h1>Welcome to My Website</h1>
-        <p>Enjoy the beautiful view of Paris!</p>
-    </div>
-</body>
-</html>
         .navbar {
             background-color: black;
             overflow: hidden;
@@ -208,11 +187,27 @@
     </div>
 
     <div id="welcome" class="content welcome" style="display: block;">
-<h1 class="static-text">Mirë se vini në faqen time personale!</h1>
+<h1 class="animated-text">Mirë se vini në faqen time personale!</h1>
 
 <style>
-  .static-text {
-    color: #fff; /* Ngjyra e bardhë */
+  .animated-text {
+    display: inline-block;
+    animation: fadeIn 2s ease-in-out infinite, colorChange 3s ease-in-out infinite;
+    color: #fff; /* Ngjyra e bardhë fillestare */
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @keyframes colorChange {
+    0% { color: #fff; }
+    25% { color: #ff6347; } /* Ngjyra e kuqe domate */
+    50% { color: #ffd700; } /* Ngjyra e artë */
+    75% { color: #00ff00; } /* Ngjyra e gjelbër */
+    100% { color: #1e90ff; } /* Ngjyra e kaltër e thellë */
   }
 </style>
 <p>
