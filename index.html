@@ -6,26 +6,14 @@
     <title>Faqja Ime Personale</title>
     <style>
         /* Stilet ekzistuese */
-        background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
-    background-size: cover;
-    animation: backgroundAnimation 10s infinite alternate;
-}
-
-@keyframes backgroundAnimation {
-    0% { filter: hue-rotate(0deg); }
-    50% { filter: hue-rotate(180deg); }
-    100% { filter: hue-rotate(360deg); }
-}
-
-.element {
-    animation: elementAnimation 5s infinite;
-}
-
-@keyframes elementAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(1); }
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            animation: backgroundAnimation 20s infinite alternate;
         }
         @keyframes backgroundAnimation {
             0% { background-position: 0% 0%; }
