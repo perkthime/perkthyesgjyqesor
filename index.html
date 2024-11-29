@@ -303,11 +303,22 @@
 
     </div>
 
-    <div id="service1" class="content service1">
-        <h1>Video në shqip</h1>
-        <p>Detajet e Video në shqip.</p>
-        </div>
-    </div>
+   <div id="service1" class="content service1 video-shqip">
+    <h1>Video në shqip</h1>
+    <p>Detajet e Video në shqip.</p>
+</div>
+.video-shqip {
+    display: none;
+}
+
+.video-shqip.active {
+    display: block;
+}
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname.includes('video-ne-shqip')) {
+        document.querySelector('.video-shqip').classList.add('active');
+    }
+});
 
     <div id="service2" class="content service2">
         <h1>Video në frëngjisht</h1>
