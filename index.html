@@ -121,15 +121,13 @@
             border-radius: 10px;
         }
         .social-container {
-            position: fixed;
-            bottom: 0;
-            left: 0;
             padding: 8px;
+            margin: 0px;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            width: 100%;
+            flex-wrap: wrap;
+            min-height: 52px;
         }
         .social-links {
             display: flex;
@@ -155,19 +153,6 @@
             .navbar .right a {
                 padding: 10px;
             }
-        }
-        /* Stilet e reja për ndryshimin e ngjyrave */
-        .dropdown:hover .dropbtn {
-            background-color: red;
-        }
-        .dropdown-content a:nth-child(1):hover {
-            background-color: green;
-        }
-        .dropdown-content a:nth-child(2):hover {
-            background-color: lightblue;
-        }
-        .navbar .right a:nth-child(3):hover {
-            background-color: brown;
         }
     </style>
 </head>
@@ -201,17 +186,11 @@
 
     <div id="service1" class="content service1">
         <h1>Shërbimi 1</h1>
-<p>Detajet e Shërbimit 1.</p>
-<div class="image-container">
-    <!-- Hapësira për videon -->
-    <div class="video-container">
-        <iframe src="https://drive.google.com/file/d/17aReN5sGgcSbZQmdiClIEduKTdQWpxHh/view?usp=sharing" frameborder="0" allowfullscreen></iframe>
+        <p>Detajet e Shërbimit 1.</p>
+        <div class="image-container">
+            <img src="path-to-your-image.jpg" alt="Fotografia ime">
+        </div>
     </div>
-    <!-- Hapësira për të shkruar -->
-    <div class="text-container">
-        <textarea placeholder="Shkruani këtu..."></textarea>
-    </div>
-</div>
 
     <div id="service2" class="content service2">
         <h1>Shërbimi 2</h1>
