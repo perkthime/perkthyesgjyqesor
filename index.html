@@ -187,14 +187,14 @@
 <style>
   .animated-text {
     display: inline-block;
-    animation: fadeIn 2s ease-in-out infinite, colorChange 3s ease-in-out infinite, scatter 5s ease-in-out infinite;
+    animation: colorChange 3s ease-in-out infinite;
     color: #fff; /* Ngjyra e bardhë fillestare */
+    position: relative;
   }
 
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
+  .animated-text span {
+    display: inline-block;
+    animation: fly 5s ease-in-out infinite;
   }
 
   @keyframes colorChange {
@@ -205,13 +205,26 @@
     100% { color: #1e90ff; } /* Ngjyra e kaltër e thellë */
   }
 
-  @keyframes scatter {
+  @keyframes fly {
     0%, 100% { transform: translateX(0) translateY(0); }
-    25% { transform: translateX(-10px) translateY(-10px); }
-    50% { transform: translateX(10px) translateY(10px); }
-    75% { transform: translateX(-10px) translateY(10px); }
+    25% { transform: translateX(100px) translateY(-100px); }
+    50% { transform: translateX(-100px) translateY(100px); }
+    75% { transform: translateX(100px) translateY(100px); }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const text = document.querySelector('.animated-text');
+    const letters = text.textContent.split('');
+    text.textContent = '';
+    letters.forEach(letter => {
+      const span = document.createElement('span');
+      span.textContent = letter;
+      text.appendChild(span);
+    });
+  });
+</script>
 <p>
   <span class="click-icon" style="color: blue;">👉</span>
   <a href="#" onclick="showSection('services')" class="highlight">
