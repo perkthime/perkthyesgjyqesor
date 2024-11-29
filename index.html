@@ -187,7 +187,7 @@
 <style>
   .animated-text {
     display: inline-block;
-    animation: fadeIn 2s ease-in-out infinite, colorChange 3s ease-in-out infinite;
+    animation: fadeIn 2s ease-in-out infinite, colorChange 3s ease-in-out infinite, scatter 5s ease-in-out infinite;
     color: #fff; /* Ngjyra e bardhë fillestare */
   }
 
@@ -203,6 +203,13 @@
     50% { color: #ffd700; } /* Ngjyra e artë */
     75% { color: #00ff00; } /* Ngjyra e gjelbër */
     100% { color: #1e90ff; } /* Ngjyra e kaltër e thellë */
+  }
+
+  @keyframes scatter {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-10px) translateY(-10px); }
+    50% { transform: translateX(10px) translateY(10px); }
+    75% { transform: translateX(-10px) translateY(10px); }
   }
 </style>
 <p>
