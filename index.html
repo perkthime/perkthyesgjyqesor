@@ -1,12 +1,56 @@
-<div data-component-theme="portalThemeColor1" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto; position: relative;">
-  <video autoplay muted loop style="position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-    <source src="https://www.pexels.com/video/close-up-shot-of-red-ink-diffusion-in-water-9668755/" type="video/mp4">
-  </video>
-  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap; flex-direction: row-reverse;">
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"></div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <h2>Mirë se vini në faqen time personale!</h2>
-      <button onclick="window.location.href='/page'" type="button" value="/page" class="button1">Keni nevojë për përkthyes gjyqësor të besueshëm?</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website me Animacion</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #myVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="background-video">
+        <video autoplay muted loop id="myVideo">
+            <source src="https://www.pexels.com/video/close-up-shot-of-red-ink-diffusion-in-water-9668755/" type="video/mp4">
+        </video>
     </div>
-  </div>
-</div>
+    <div class="content">
+        <h1>Mirë se vini në faqen time!</h1>
+        <p>Kjo është një faqe me një sfond animacioni të bukur.</p>
+    </div>
+    <script>
+        // JavaScript code can be added here if needed for additional functionality
+    </script>
+</body>
+</html>
