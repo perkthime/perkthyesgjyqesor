@@ -15,10 +15,16 @@
             padding: 0;
             animation: backgroundAnimation 20s infinite alternate;
         }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
-        }
+
+@keyframes animateBackground {
+    0% { background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg'); }
+    50% { background-image: url('https://www.pexels.com/video/close-up-shot-of-red-ink-diffusion-in-water-9668755/'); }
+    100% { background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg'); }
+}
+
+body {
+    animation: animateBackground 10s infinite;
+}
         .navbar {
             background-color: black;
             overflow: hidden;
