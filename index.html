@@ -8,24 +8,16 @@
         /* Stilet ekzistuese */
         body {
             font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            animation: backgroundAnimation 20s infinite alternate;
         }
-        .background-video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        .content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            padding: 20px;
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
         .navbar {
             background-color: black;
@@ -90,6 +82,13 @@
         }
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+        .content {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            color: white;
+            display: none;
         }
         .welcome {
             color: white;
@@ -162,82 +161,206 @@
     </style>
 </head>
 <body>
-    <video autoplay muted loop class="background-video">
-        <source src="https://www.pexels.com/video/9668755/download/" type="video/mp4">
-    </video>
-    <div class="content">
-        <div class="navbar">
-            <div class="left">Logo</div>
-            <div class="right">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <div class="dropdown">
-                    <button class="dropbtn">More</button>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="main-text">Mirë se vini në faqen time personale!</div>
-        <div class="image-container">
-            <img src="https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg" alt="Example Image">
-        </div>
-        <div class="social-container">
-            <div class="social-links">
-                <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733547.png" alt="Facebook"></a>
-                <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733558.png" alt="Twitter"></a>
-                <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733579.png" alt="Instagram"></a>
-            </div>
+    <div class="navbar">
+       <span class="left">
+  <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
+  <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
+  <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+</span>
+<div class="right">
+    <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+    <div class="dropdown">
+        <button class="dropbtn">Shërbime 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('service1')">Video në shqip</a>
+            <a href="#" onclick="showSection('service2')">Video në frëngjisht</a>
         </div>
     </div>
-</body>
-</html>
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .navbar .right a {
-                padding: 10px;
-            }
+    <a href="#" onclick="showSection('contact')">Kontaktoni</a>
+</div>
+
+            </div> 
+        </div>
+    </div>
+
+    <div id="welcome" class="content welcome" style="display: block;">
+<h1 class="static-text">Mirë se vini në faqen time personale!</h1>
+
+<style>
+  .static-text {
+    color: #fff; /* Ngjyra e bardhë */
+  }
+</style>
+<p>
+  <span class="click-icon" style="color: blue;">👉</span>
+  <a href="#" onclick="showSection('services')" class="highlight">
+    Keni nevojë për përkthyes gjyqësor të besueshëm?
+  </a>
+</p>
+
+<style>
+  .click-icon {
+    display: inline-block;
+    animation: move 1s infinite;
+    margin-right: 5px; /* Adjust the spacing as needed */
+  }
+
+  @keyframes move {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(10px);
+    }
+    60% {
+      transform: translateX(5px);
+    }
+  }
+</style>
+    </div>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktoni</title>
+    <style>
+        #contact p:hover {
+            cursor: pointer;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <video autoplay muted loop class="background-video">
-        <source src="https://www.pexels.com/video/9668755/download/" type="video/mp4">
-    </video>
-    <div class="content">
-        <div class="navbar">
-            <div class="left">Logo</div>
-            <div class="right">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <div class="dropdown">
-                    <button class="dropbtn">More</button>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="main-text">Mirë se vini në faqen time personale!</div>
-        <div class="image-container">
-            <img src="https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg" alt="Example Image">
-        </div>
-        <div class="social-container">
-            <div class="social-links">
-                <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733547.png" alt="Facebook"></a>
-                <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733558.png" alt="Twitter"></a>
-                <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733579.png" alt="Instagram"></a>
-            </div>
+    <div id="contact" class="content">
+        <h2>Kontaktoni</h2>
+        <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="20" height="20"> murati.arianit@gmail.com
+        </p>
+        <p onclick="window.location.href='tel:+38345569246'">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
+        </p>
+    </div>
+</body>
+</html>
+
+</body>
+</html>
+
+    <div id="services" class="content services">
+        <h1>Shërbimet</h1>
+        <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
+        <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
+<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+    </div>
+  </div>
+</div>
+<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: green; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime Ligjore</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare që kërkojnë saktësi të lartë dhe njohuri të terminologjisë ligjore.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: blue; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime Mjekësore</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve, që kërkojnë njohuri të specializuara në terminologjinë mjekësore.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: orange; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime Teknike</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike që kërkojnë njohuri të thella të terminologjisë teknike.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: purple; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime Financiare</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare që kërkojnë saktësi dhe njohuri të terminologjisë financiare.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: yellow; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime të Marketingut</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale që kërkojnë kreativitet dhe përshtatje kulturore.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: red; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime të Etiketave Ushqimore</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit që kërkojnë saktësi dhe përputhje me rregulloret e sigurisë ushqimore.</p>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+  // Fix for incorrect viewport width setting in IE 10 on Windows Phone 8.
+  if (navigator.userAgent.match(/IEMobile/10.0/)) {
+    var msViewportStyle = document.createElement("style");
+    msViewportStyle?.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+    document.getElementsByTagName("head")[0]?.appendChild(msViewportStyle);
+  }
+</script>
+
+    </div>
+
+    <style>
+    .content {
+        text-align: center;
+    }
+    iframe {
+        width: 80%;
+        height: 450px;
+    }
+</style>
+
+<div id="service1" class="content service1">
+    <h1>Video në shqip</h1>
+    <p>Shikoni videon në gjuhën shqipe për të mësuar më shumë rreth profesionalizmit dhe saktësisë që ne ofrojmë në çdo fushë.</p>
+    <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="service2" class="content service2">
+    <h1>Video në frëngjisht</h1>
+    <p>Shikoni videon në gjuhën frënge për të mësuar më shumë rreth profesionalizmit dhe saktësisë që ne ofrojmë në çdo fushë.</p>
+    <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+    <div id="service2" class="content service2">
+        <h1>Video në frëngjisht</h1>
+        <p>Detajet e Video në frëngjisht.</p>
+        <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="social-container">
+        <div class="social-links">
+            <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram profile of Arianit Murati">
+            </a>
+            <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile of Arianit Murati">
+            </a>
+            <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile of Arianit Murati">
+            </a>
         </div>
     </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
