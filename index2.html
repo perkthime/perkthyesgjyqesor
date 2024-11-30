@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Background Video and Music</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="https://www.pexels.com/video/close-up-shot-of-red-ink-diffusion-in-water-9668755/" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>Enjoy the background video and music!</p>
+    </div>
+    <audio id="background-music" src="https://soundcloud.com/erik-satie/gnossienne-n-1" autoplay loop></audio>
+    <script>
+        document.getElementById('background-music').play();
+    </script>
+</body>
+</html>
