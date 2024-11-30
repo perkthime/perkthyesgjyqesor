@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Page</title>
   <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
     #backgroundVideo {
       position: fixed;
       right: 0;
@@ -13,63 +19,72 @@
       min-height: 100%;
       z-index: -1;
     }
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
   </style>
 </head>
 <body>
-  <div data-component-theme="portalThemeColor1" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto; background-image: url(&quot;/pexels-rafael-guajardo-194140-604684.jpg&quot;); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-    <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap; flex-direction: row-reverse;">
-      <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"></div>
-      <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-        <h2>Mirë se vini në faqen time personale!</h2>
-        <button onclick="window.location.href='/page'" type="button" value="/page" class="button1">Keni nevojë për përkthyes gjyqësor të besueshëm?</button>
+  <video autoplay muted loop id="backgroundVideo">
+    <source src="https://www.pexels.com/video/close-up-shot-of-red-ink-diffusion-in-water-9668755/" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <audio autoplay loop>
+    <source src="https://soundcloud.com/erik-satie/gnossienne-n-1" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="content">
+    <div data-component-theme="portalThemeColor1" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto; background-image: url(&quot;/pexels-rafael-guajardo-194140-604684.jpg&quot;); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+      <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap; flex-direction: row-reverse;">
+        <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"></div>
+        <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+          <h2>Mirë se vini në faqen time personale!</h2>
+          <button onclick="window.location.href='/page'" type="button" value="/page" class="button1">Keni nevojë për përkthyes gjyqësor të besueshëm?</button>
+        </div>
       </div>
     </div>
-  </div>
-  <div data-component-theme="portalThemeColor11" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 52px;"></div>
-  <div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-    <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-      <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-        <img src="/Geometric-2.png" alt="" name="Geometric-2.png" style="width: 102.56%; height: 343px; max-width: 100%;">
-      </div>
-      <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-        <h2>Biografia</h2>
-        <p>Main pages often include links to stories about how individual people or organizations benefit from interacting with your organization.</p>
+    <div data-component-theme="portalThemeColor11" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 52px;"></div>
+    <div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+      <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+        <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+          <img src="/Geometric-2.png" alt="" name="Geometric-2.png" style="width: 102.56%; height: 343px; max-width: 100%;">
+        </div>
+        <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+          <h2>Biografia</h2>
+          <p>Main pages often include links to stories about how individual people or organizations benefit from interacting with your organization.</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div data-component-theme="portalThemeColor10" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 52px;"></div>
-  <div data-component-theme="portalThemeColor1" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-    <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-      <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-        <p style="text-align: center; color: var(--portalThemeColor4);">Follow us</p>
-        <div class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-          <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-            <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-              <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
-                <img src="/1298747instagrambrandlogosocial mediaicon.png" alt="Instagram profile of Arianit Murati" style="max-width: 100%; width: 100px; height: auto;">
-              </a>
-            </div>
-            <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-              <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook" style="margin-left: auto; margin-right: auto;">
-                <img src="/5365678fbfacebookfacebook logoicon.png" alt="Facebook profile of Arianit Murati" style="max-width: 100%; width: 100px; height: auto;">
-              </a>
-            </div>
-            <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-              <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn" style="margin-left: auto; margin-right: 0;">
-                <img src="/5296501linkedinnetworklinkedin logoicon.png" alt="LinkedIn profile of Arianit Murati" style="max-width: 100%; width: 100px; height: auto;">
-              </a>
+    <div data-component-theme="portalThemeColor10" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 52px;"></div>
+    <div data-component-theme="portalThemeColor1" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+      <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+        <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+          <p style="text-align: center; color: var(--portalThemeColor4);">Follow us</p>
+          <div class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+            <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+              <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+                <a href="https://www.instagram.com/arianitmurati80" target="_blank" aria-label="Instagram">
+                  <img src="/1298747instagrambrandlogosocial mediaicon.png" alt="Instagram profile of Arianit Murati" style="max-width: 100%; width: 100px; height: auto;">
+                </a>
+              </div>
+              <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+                <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook" style="margin-left: auto; margin-right: auto;">
+                  <img src="/5365678fbfacebookfacebook logoicon.png" alt="Facebook profile of Arianit Murati" style="max-width: 100%; width: 100px; height: auto;">
+                </a>
+              </div>
+              <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+                <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn" style="margin-left: auto; margin-right: 0;">
+                  <img src="/5296501linkedinnetworklinkedin logoicon.png" alt="LinkedIn profile of Arianit Murati" style="max-width: 100%; width: 100px; height: auto;">
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <video autoplay muted loop id="backgroundVideo">
-    <source src="https://www.pexels.com/video/close-up-shot-of-red-ink-diffusion-in-water-9668755/" type="video/mp4">
-  </video>
-  <audio autoplay loop>
-    <source src="https://soundcloud.com/erik-satie/gnossienne-n-1" type="audio/mpeg">
-  </audio>
   <script type="text/javascript">
     // Fix for incorrect viewport width setting in IE 10 on Windows Phone 8.
     if (navigator.userAgent.match(/IEMobile/10.0/)) {
