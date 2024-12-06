@@ -3,38 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profili i Arianit Murati</title>
+    <title>Rrjetet Sociale</title>
     <style>
-        .social-icons {
+        body {
+            font-family: Arial, sans-serif;
             display: flex;
-            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
         }
-        .social-icons a {
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .social-links a {
+            display: block;
+            margin: 10px 0;
             text-decoration: none;
-            color: inherit;
+            color: #333;
+            font-size: 18px;
         }
-        .phone-number {
-            display: inline-block;
-            margin-top: 20px;
-            cursor: pointer;
+        .social-links a:hover {
+            color: #0073e6;
         }
     </style>
 </head>
 <body>
-    <h1>Mirë se vini në profilin tim!</h1>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/arianitmurati80" target="_blank">
-            <img src="https://icons8.com/icon/85078/instagram" alt="Instagram" width="40">
-        </a>
-        <a href="https://www.facebook.com/arianit.murati.942" target="_blank">
-            <img src="https://icons8.com/icon/118497/facebook" alt="Facebook" width="40">
-        </a>
-        <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank">
-            <img src="https://icons8.com/icon/13930/linkedin" alt="LinkedIn" width="40">
-        </a>
-    </div>
-    <div class="phone-number" onclick="window.location.href='tel:+38345569246'">
-        +383 45 569 246
+    <div class="container">
+        <h1>Rrjetet Sociale</h1>
+        <div class="social-links">
+            <a href="https://www.instagram.com/arianitmurati80" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/arianit.murati.942" target="_blank">Facebook</a>
+            <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank">LinkedIn</a>
+        </div>
     </div>
 </body>
 </html>
