@@ -44,11 +44,28 @@
             transition: all 0.3s ease;
         }
         .icons a:hover {
-            color: #000;
-            background-color: #fff;
+            color: #ff6600;
+            background-color: #333;
         }
         .icons a i {
             font-size: 20px;
+        }
+        .phone {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .phone a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .phone a:hover {
+            color: #ff6600;
+        }
+        .phone i {
+            margin-right: 5px;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -58,7 +75,10 @@
         <h1>Arianit Murati</h1>
         <p>Përkthyes gjyqësor/Traducteur assermenté</p>
         <p>Web: <a href="https://perkthime.github.io/arianitmurati/" target="_blank">https://perkthime.github.io/arianitmurati/</a></p>
-        <p><i class="fas fa-phone"></i> +383 45 569 246</p>
+        <div class="phone">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+38345569246">+383 45 569 246</a>
+        </div>
         <div class="icons">
             <a href="https://www.instagram.com/arianitmurati" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.facebook.com/arianitmurati" target="_blank"><i class="fab fa-facebook-f"></i></a>
